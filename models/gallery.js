@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const gallerySchema = mongoose.Schema({
   name: String,
+  image: String,
   latlgn: {
     lat: Number,
     lgn: Number
