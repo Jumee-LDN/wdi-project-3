@@ -9,5 +9,5 @@ function Router($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
 }
 
-angular.module('yourAppName', ['ui.router'])
+angular.module('exhibition', ['ui.router'])
   .config(Router);
