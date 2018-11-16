@@ -21,6 +21,6 @@ const exhibitionSchema = mongoose.Schema({
   ]
 });
 
-const exhibitionModel = mongoose.model('Magazine', exhibitionSchema);
+const exhibitionModel = mongoose.model('Exhibition', exhibitionSchema);
 
 module.exports = exhibitionModel;
