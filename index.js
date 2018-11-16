@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
+const env = require('./config/environment');
+const port = env.port;
+const mongoose = require('mongoose');
 
-const { port } = require('./config/environment');
+mongoose.connect(env.dbUri);
 
 app.use(express.static(`${__dirname}/public`));
 
