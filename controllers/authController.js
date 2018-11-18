@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const env = require('../config/environment');
 
-function login(req, res, next) {
+function loginRoute(req, res, next) {
   User.findOne({ email: req.body.email })
     .then(user => {
       if (user && user.validatePassword(req.body.password)) {
@@ -11,7 +11,7 @@ function login(req, res, next) {
           sub: user._id
         }, env.secret, { expiresIn: '24h' });
         res.json({
-          message: `Welcome back ${user.username}`,
+          message: `Hello again ${user.username}`,
           token: token
         });
       } else {
@@ -23,7 +23,7 @@ function login(req, res, next) {
     .catch(next);
 }
 
-function register(req, res, next) {
+function registerRoute(req, res, next) {
   User.create(req.body)
     .then(user => res.json({
       message: `Welcome ${user.username}`
@@ -32,6 +32,6 @@ function register(req, res, next) {
 }
 
 module.exports = {
-  // login: login,
-  register: register
+  loginRoute: loginRoute,
+  registerRoute: registerRoute
 };

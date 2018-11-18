@@ -5,9 +5,14 @@ const mongoose = require('mongoose');
 const router = require('./config/router');
 const port = env.port;
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const session = require('express-session');
 
+
+app.use(morgan('dev'));
 mongoose.connect(env.dbUri);
 app.use(bodyParser.json());
+app.use(session({ secret: 'shh...', resave: false, saveUninitialized: false }));
 
 app.use('/api', router);
 
