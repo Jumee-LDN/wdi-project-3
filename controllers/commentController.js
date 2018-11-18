@@ -6,11 +6,12 @@ function createRoute(req, res, next){
   Exhibition
     .findById(req.params.exhibitionId)
     .then(exhibition => {
+      req.body.commentAuthor = req.tokenUserId;
       exhibition.comments.push(req.body);
       console.log('creating a comment', req.body);
       return exhibition.save()
     })
-    // FOR LATER when we want to populate the field with who wrote the comment: .then(exhibition => Exhibition.populate(exhibition, 'comments'))
+    .then(exhibition => Exhibition.populate(exhibition, 'comments.commentAuthor'))
     .then(exhibition => res.json(exhibition))
     .catch(next);
 }
