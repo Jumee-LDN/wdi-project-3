@@ -20,6 +20,7 @@ router.route('/galleries/:id')
 
 router.route('/exhibitions/:id')
   .get(exhibitionController.showRoute)
-  .put(exhibitionController.updateRoute);
+  .put(exhibitionController.updateRoute)
+  .delete(exhibitionController.deleteRoute);
 
 module.exports = router;

@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" ng-app="exhibition">
+<html ng-app="exhibition">
   <head>
     <meta charset="utf-8">
-    <title>WDI Project 3</title>
+    <title>Exhibitions</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <nav class="navbar">
+      <div class="navbar-start">
+        <a class="navbar-item">NAVBAR</a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" ui-sref="/">Home</a>
+        <a class="navbar-item" ui-sref="#">Galleries</a>
+        <a class="navbar-item" ui-sref="#">Add a gallery</a>
+      </div>
+    </nav>
+    <div class="container">
+      <div ui-view></div>
+    </div>
   </body>
 </html>

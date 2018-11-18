@@ -27,12 +27,27 @@ function createRoute(req, res, next){
     .catch(next);
 }
 
-function updateRoute
+function updateRoute(req, res, next){
+  Exhibition
+    .findById(req.params.id)
+    .then(exhbition => exhbition.set(req.body))
+    .then(exhbition => exhbition.save())
+    .then(exhbition => res.json(exhbition))
+    .catch(next);
+}
 
+function deleteRoute(req, res, next) {
+  Exhibition.findByIdAndDelete(req.params.id)
+    .then(() => {
+      console.log('exhibition has been deleted');
+      res.sendStatus(204);
+    })
+    .catch(next);
+}
 module.exports = {
   indexRoute: indexRoute,
   showRoute: showRoute,
   createRoute: createRoute,
-  updateRoute: updateRoute
-  // delete: deleteRoute
+  updateRoute: updateRoute,
+  deleteRoute: deleteRoute
 };
