@@ -10,7 +10,7 @@ function createRoute(req, res, next){
       console.log('creating a comment', req.body);
       return exhibition.save()
     })
-    // .then(exhibition => Exhibition.populate(exhibition, 'comments'))
+    // FOR LATER when we want to populate the field with who wrote the comment: .then(exhibition => Exhibition.populate(exhibition, 'comments'))
     .then(exhibition => res.json(exhibition))
     .catch(next);
 }
@@ -23,7 +23,7 @@ function deleteRoute(req, res, next){
       comment.remove();
       return exhibition.save();
     })
-    // .then(exhibition => Exhibition.populate(exhibition, ''))
+    // FOR LATER: .then(exhibition => Exhibition.populate(exhibition, ''))
     .then(exhibition => res.json(exhibition))
     .catch(next);
 }
