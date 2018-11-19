@@ -13,7 +13,7 @@ app.use(morgan('dev'));
 mongoose.connect(env.dbUri);
 app.use(bodyParser.json());
 app.use(session({ secret: 'shh...', resave: false, saveUninitialized: false }));
-
+app.use(express.static(`${__dirname}/public`));
 app.use('/api', router);
 
 app.listen(port, () => console.log(`Express is running on port ${port}`));
