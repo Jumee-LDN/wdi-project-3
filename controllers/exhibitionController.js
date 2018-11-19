@@ -11,6 +11,7 @@ function indexRoute(req, res, next){
 function showRoute(req, res, next){
   Exhibition
     .findById(req.params.id)
+    .populate('comments.commentAuthor')
     .populate('gallery')
     .then(exhibition => {
       res.json(exhibition);

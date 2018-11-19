@@ -13,5 +13,18 @@
       <br>
       <button class="button" ng-click="handleDelete()">DELETE EXHIBITION</button>
     </div>
-</div>
+
+    <div class="comments">
+      <div ng-repeat="comment in exhibition.comments">
+        <span style="font-weight: bold;">{{ comment.commentAuthor.username.toUpperCase() }}</span>
+        <span>{{ comment.text }}</span>
+        <!-- ng-if="comment.user._id === userId"  -->
+        <button class="delete-button" ng-click="deleteComment(comment)">x</button>
+      </div>
+      <form ng-submit="createComment()">
+        <input type="text" ng-model="comment.text">
+        <button class="button">Comment</button>
+      </form>
+
+    </div>
   </div>
