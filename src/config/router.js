@@ -53,7 +53,7 @@ function Router($stateProvider) {
     })
     .state('galleryEdit', {
       templateUrl: './views/galleries/galleryEdit.html',
-      url: '/galleries/:id/eidt',
+      url: '/galleries/:id/edit',
       controller: galleryEditCtrl
     })
     .state('exhibitionNew', {
