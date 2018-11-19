@@ -22,7 +22,7 @@ function createRoute(req, res, next){
     .create(req.body)
     .then(exhibition => {
       console.log('creating a exhibition', req.body);
-      res.json(exhibition);
+      res.status(201).json(exhibition);
     })
     .catch(next);
 }

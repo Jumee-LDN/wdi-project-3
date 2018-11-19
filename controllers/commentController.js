@@ -24,7 +24,7 @@ function deleteRoute(req, res, next){
       comment.remove();
       return exhibition.save();
     })
-    // FOR LATER: .then(exhibition => Exhibition.populate(exhibition, ''))
+    .then(exhibition => Exhibition.populate(exhibition, 'comments.commentAuthor'))
     .then(exhibition => res.json(exhibition))
     .catch(next);
 }
