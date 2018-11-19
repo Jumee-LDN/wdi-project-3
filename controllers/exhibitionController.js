@@ -12,7 +12,7 @@ function showRoute(req, res, next){
   Exhibition
     .findById(req.params.id)
     .then(exhibition => {
-      res.json(exhibition)
+      res.json(exhibition);
     })
     .catch(next);
 }

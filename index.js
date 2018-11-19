@@ -17,3 +17,5 @@ app.use(session({ secret: 'shh...', resave: false, saveUninitialized: false }));
 app.use('/api', router);
 
 app.listen(port, () => console.log(`Express is running on port ${port}`));
+
+module.exports = app;

@@ -9,7 +9,7 @@ function createRoute(req, res, next){
       req.body.commentAuthor = req.tokenUserId;
       exhibition.comments.push(req.body);
       console.log('creating a comment', req.body);
-      return exhibition.save()
+      return exhibition.save();
     })
     .then(exhibition => Exhibition.populate(exhibition, 'comments.commentAuthor'))
     .then(exhibition => res.json(exhibition))

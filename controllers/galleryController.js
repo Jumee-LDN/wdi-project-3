@@ -19,7 +19,7 @@ function createRoute(req, res, next) {
     .create(req.body)
     .then(gallery => {
       console.log('creating a gallery', req.body);
-      res.json(gallery);
+      res.status(201).json(gallery);
     })
     .catch(next);
 }
