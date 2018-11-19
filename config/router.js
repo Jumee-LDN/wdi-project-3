@@ -46,9 +46,9 @@ router.route('/exhibitions/:id')
   .delete(secureRoute, exhibitionController.deleteRoute);
 
 router.route('/exhibitions/:exhibitionId/comments')
-  .post(secureRoute, commentController.createRoute);
+  .post(commentController.createRoute);
 
 router.route('/exhibitions/:exhibitionId/comments/:commentId')
-  .delete(secureRoute, commentController.deleteRoute);
+  .delete(commentController.deleteRoute);
 
 module.exports = router;
