@@ -1,5 +1,6 @@
 import exhibitionIndexCtrl from '../controllers/exhibitions/exhibitionIndexCtrl';
 import exhibitionShowCtrl from '../controllers/exhibitions/exhibitionShowCtrl';
+import exhibitionNewCtrl from '../controllers/exhibitions/exhibitionNewCtrl';
 import galleryIndexCtrl from '../controllers/galleries/galleryIndexCtrl';
 import galleryShowCtrl from '../controllers/galleries/galleryShowCtrl';
 import galleryNewCtrl from '../controllers/galleries/galleryNewCtrl';
@@ -48,8 +49,12 @@ function Router($stateProvider) {
       templateUrl: './views/galleries/galleryNew.html',
       url: '/galleries/new',
       controller: galleryNewCtrl
+    })
+    .state('exhibitionNew', {
+      templateUrl: './views/exhibitions/exhibitionNew.html',
+      url: '/exhibitions/new',
+      controller: exhibitionNewCtrl
     });
-
 }
 
 export default Router;

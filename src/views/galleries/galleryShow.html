@@ -2,6 +2,7 @@
 <p>{{ gallery.locationName}}</p>
 <img src="{{ gallery.image }}" alt="{{ gallery.name }}">
 
+<button class="button" ui-sref="exhibitionNew">✚</button>
 <div ng-repeat="exhibition in gallery.exhibitionList" class="card column is-3-desktop" style="margin: 10px;">
   <div>
     <p>{{exhibition.name}}</p>
