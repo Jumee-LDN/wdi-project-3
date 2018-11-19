@@ -4,6 +4,7 @@ import exhibitionNewCtrl from '../controllers/exhibitions/exhibitionNewCtrl';
 import galleryIndexCtrl from '../controllers/galleries/galleryIndexCtrl';
 import galleryShowCtrl from '../controllers/galleries/galleryShowCtrl';
 import galleryNewCtrl from '../controllers/galleries/galleryNewCtrl';
+import galleryEditCtrl from '../controllers/galleries/galleryEditCtrl';
 import registerCtrl from '../controllers/auth/registerCtrl';
 import loginCtrl from '../controllers/auth/loginCtrl';
 
@@ -49,6 +50,11 @@ function Router($stateProvider) {
       templateUrl: './views/galleries/galleryNew.html',
       url: '/galleries/new',
       controller: galleryNewCtrl
+    })
+    .state('galleryEdit', {
+      templateUrl: './views/galleries/galleryEdit.html',
+      url: '/galleries/:id/eidt',
+      controller: galleryEditCtrl
     })
     .state('exhibitionNew', {
       templateUrl: './views/exhibitions/exhibitionNew.html',
