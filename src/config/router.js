@@ -3,10 +3,22 @@ import exhibitionShowCtrl from '../controllers/exhibitions/exhibitionShowCtrl';
 import galleryIndexCtrl from '../controllers/galleries/galleryIndexCtrl';
 import galleryShowCtrl from '../controllers/galleries/galleryShowCtrl';
 import galleryNewCtrl from '../controllers/galleries/galleryNewCtrl';
+import registerCtrl from '../controllers/auth/registerCtrl';
+import loginCtrl from '../controllers/auth/loginCtrl';
 
 //INDIA:
 function Router($stateProvider) {
   $stateProvider
+    .state('login', {
+      templateUrl: './views/auth/login.html',
+      url: '/login',
+      controller: loginCtrl
+    })
+    .state('register', {
+      templateUrl: './views/auth/register.html',
+      url: '/register',
+      controller: registerCtrl
+    })
     .state('home', {
       templateUrl: './views/home.html',
       url: '/'
