@@ -1,0 +1,17 @@
+
+<div class="columns is-centered">
+  <div class="column is-6-desktop">
+    <h1 class="title is-2 has-text-centered">{{exhibition.name}}</h1>
+    <p>DATES: {{exhibition.dates}}</p>
+    <p>GALLERY: {{ exhibition.gallery }}</p>
+    <hr>
+    <p class="showDescription">Description: {{exhibition.description}}</p>
+    <div class="card-image">
+      <img src="{{ exhibition.image }}" alt="This is{{exhibition.name}}">
+    </div>
+</div>
+    <div class="has-text-centered">
+      <br>
+      <button  class="button is-danger" ng-click="handleDelete()">DELETE EXHIBITION</button>
+    </div>
+  </div>
