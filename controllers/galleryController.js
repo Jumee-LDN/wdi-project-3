@@ -10,7 +10,7 @@ function indexRoute(req, res, next) {
 function showRoute(req, res, next) {
   Gallery
     .findById(req.params.id)
-    .populate('createdBy comments.user')
+    .populate('exhibitionList')
     .then(gallery => res.json(gallery))
     .catch(next);
 }

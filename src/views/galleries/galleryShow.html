@@ -2,6 +2,11 @@
 <p>{{ gallery.locationName}}</p>
 <img src="{{ gallery.image }}" alt="{{ gallery.name }}">
 
+<div ng-repeat="exhibition in gallery.exhibitionList" class="card column is-3-desktop" style="margin: 10px;">
+  <div>
+    <p>{{exhibition.name}}</p>
+  </div>
+  </div>
 <div class="buttons" ng-if="isAuthenticated() && gallery.createdBy._id === userId">
   <button class="button is-info" ui-sref="galleryEdit({ id: gallery._id })">Edit</button>
   <button class="button is-danger" ng-click="handleDelete()">DELETE</button>

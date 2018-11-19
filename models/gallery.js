@@ -16,6 +16,10 @@ gallerySchema.virtual('exhibitionList', {
   foreignField: 'gallery'
 });
 
+gallerySchema.set('toJSON', {
+  virtuals: true
+});
+
 const galleryModel = mongoose.model('Gallery', gallerySchema);
 
 module.exports = galleryModel;
