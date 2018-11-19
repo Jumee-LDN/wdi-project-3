@@ -1,0 +1,16 @@
+<h2>A List of Galleries</h2>
+
+<div ng-repeat="gallery in allGalleries" class="column is-4">
+  <a ui-sref="galleryShow({ id: gallery._id })">
+    <div class="card">
+      <div class="card-header">
+        {{ gallery.name }}
+      </div>
+      <div class="card-image">
+        <figure class="image">
+          <img ng-src="{{ gallery.image }}" alt="{{ gallery.name }}">
+        </figure>
+      </div>
+    </div>
+  </a>
+</div>
