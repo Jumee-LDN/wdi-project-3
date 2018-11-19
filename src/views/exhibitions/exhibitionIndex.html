@@ -1,0 +1,27 @@
+
+<section class="columns is-multiline">
+  <div class="column is-12-desktop has-text-centered">
+    <form ng-submit="handleFilterSubmit()">
+      <label class="title is-4 searchbar" for="/">Search for a Exhibitions:</label>
+      <input type="text" class="input" ng-model="searchTerm">
+      <button class="button is-info">🔍</button>
+      <hr>
+    </form>
+  </div>
+
+  <div class="columns is-multiline is-centered">
+
+    <div ng-repeat="exhibition in filteredExhibitions" class=" card column is-3-desktop" style="margin: 10px;">
+      <a ui-sref="#">
+        <p class="title is-4 has-text-centered"> <span class="bold">{{exhibition.name}}</span> </p>
+        <p class=" content has-text-centered">{{exhibition.dates}}</p>
+
+        <div class="card-image">
+          <img src="{{ exhibition.image }}" alt="This is{{exhibition.name}}">
+        </div>
+        <div class="card-content">
+        </div>
+        </a>
+      </div>
+    </div>
+</section>
