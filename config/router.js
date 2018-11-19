@@ -33,7 +33,7 @@ router.route('/exhibitions')
   .get(exhibitionController.indexRoute);
 
 router.route('/galleries/:galleryId')
-  .post(secureRoute, exhibitionController.createRoute);
+  .post(exhibitionController.createRoute);
 
 router.route('/galleries/:id')
   .get(galleryController.show)
