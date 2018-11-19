@@ -21,5 +21,4 @@ function Router($stateProvider) {
     });
 }
 
-//INDIA:
 export default Router;
