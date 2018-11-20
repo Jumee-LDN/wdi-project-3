@@ -5,7 +5,8 @@
   </div>
 </div>
 
-<section class="main">  
+<section class="main">
+  <div class=" title has-text-centered"> <p>The Map</p></div>
   <div class="button" ng-click="findUser()">
     <p>See where you are now 🐥</p>
   </div>
@@ -29,6 +30,8 @@
 
   <div>
     <p>EXHIBITIONS:</p>
+    <div ng-repeat="exhibition in allExhibitions">
+      <a ng-click="panMapE(exhibition)">{{ exhibition.name }}</a>
   </div>
 
   <p>GALLERIES:</p>
