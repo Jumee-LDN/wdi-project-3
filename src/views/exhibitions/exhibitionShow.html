@@ -3,7 +3,8 @@
   <div class="column is-desktop">
     <h1 class="title is-2 has-text-centered">{{exhibition.name}}</h1>
     <p>DATES: {{exhibition.dates}}</p>
-    <p>GALLERY: {{ exhibition.gallery.name }}</p>
+    <p>RATING: {{exhibition.rating}}</p>
+    <a ui-sref="galleryShow({ id: exhibition.gallery._id})"><p>GALLERY: {{ exhibition.gallery.name }}</p></a>
     <hr>
     <p class="showDescription">Description: {{exhibition.description}}</p>
     <div class="card-image">
