@@ -1,0 +1,18 @@
+<h1 class="title">Map</h1>
+<!-- <form>
+  <input ng-model="searchTerm" ng-change="findPlaces()">
+  <button class="button">Search</button>
+</form> -->
+<!-- <div class="result-container">
+  <div class="search-results">
+    <div class="result" ng-repeat="place in searchResults" ng-click="goTo(place)">
+      <p>{{ place.display_name }}</p>
+    </div>
+  </div>
+</div> -->
+<div id="map-element" class="map"></div>
+<div class="columns is-multiline">
+  <div ng-repeat="gallery in galleries" class="column">
+    <a ng-click="panMap(gallery)">{{ gallery.name }}</a>
+  </div>
+</div>
