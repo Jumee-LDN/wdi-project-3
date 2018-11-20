@@ -1,5 +1,5 @@
 function exhibitionNewCtrl($scope, $http, $state){
-  // 
+  //
   // $http({
   //   method: 'GET',
   //   url: `/api/galleries/${$state.params._id}`

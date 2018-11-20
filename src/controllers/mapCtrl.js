@@ -1,6 +1,4 @@
 // import mapLib from '../lib/map';
-
-
 function mapCtrl($scope, $state, $http){
   $http({
     method: 'GET',
