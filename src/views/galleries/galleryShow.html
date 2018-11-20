@@ -9,7 +9,7 @@
 
 <hr>
 
-<button class="button" ui-sref="exhibitionNew({ galleryId: gallery._id })">ADD EXHIBITION ✚</button>
+<button class="button" ng-if="isAuthenticated()" ui-sref="exhibitionNew({ galleryId: gallery._id })">ADD EXHIBITION ✚</button>
 
 <hr>
 
