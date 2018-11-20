@@ -1,5 +1,5 @@
 .map {
-  height: 200px;
+  height: 450px;
   z-index: 0;
 }
 .welcome-section {
@@ -14,23 +14,24 @@
 .circle{
   font: 40px;
 }
-// .result-container {
-//   position: relative;
-// }
+.result-container {
+  position: relative;
+  // border-top: grey solid 1px;
+}
 
-// .search-results {
-//   z-index: 1;
-//   position: absolute;
-//   display: flex;
-//   flex-direction: column;
-//   .result {
-//     position: static;
-//     background-color: white;
-//     height: 40px;
-//     border-bottom: grey solid 1px;
-//   }
-//   :hover {
-//     background-color: #ddd;
-//     color: #558;
-//   }
-// }
+.search-results {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  .result {
+    position: static;
+    background-color: white;
+    height: 30px;
+    border-bottom: grey solid 1px;
+  }
+  :hover {
+    background-color: grey;
+    color: white;
+  }
+}

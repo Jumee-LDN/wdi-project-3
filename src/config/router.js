@@ -8,6 +8,8 @@ import galleryEditCtrl from '../controllers/galleries/galleryEditCtrl';
 import registerCtrl from '../controllers/auth/registerCtrl';
 import loginCtrl from '../controllers/auth/loginCtrl';
 import homeCtrl from '../controllers/homeCtrl';
+import exhibitionEditCtrl from '../controllers/exhibitions/exhibitionEditCtrl';
+// import mapCtrl from '../controllers/mapCtrl';
 
 //INDIA:
 function Router($stateProvider) {
@@ -58,11 +60,22 @@ function Router($stateProvider) {
       url: '/galleries/:id/edit',
       controller: galleryEditCtrl
     })
+    .state('exhibitionEdit', {
+      templateUrl: './views/exhibitions/exhibitionEdit.html',
+      url: '/exhibitions/:id/edit',
+      controller: exhibitionEditCtrl
+    })
     .state('exhibitionNew', {
       templateUrl: './views/exhibitions/exhibitionNew.html',
       url: '/galleries/:galleryId/new',
       controller: exhibitionNewCtrl
-    });
+    })
+//     .state('map', {
+//       templateUrl: './views/map.html',
+//       url: '/map',
+//       controller: mapCtrl
+//     });
+// }
 }
 
 export default Router;
