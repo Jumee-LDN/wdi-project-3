@@ -5,9 +5,36 @@
   </div>
 </div>
 
-<div class="map-section">
-  Map goes here
+<div class="button" ng-click="findUser()">
+<p>See where you are now 🐥</p>
 </div>
+
+<p >Search for locations:</p>
+<div>
+  <form>
+    <input class="input" ng-model="searchTerm" ng-change="findPlaces()">
+    <button class="button">Search</button>
+  </form>
+</div>
+<div class="result-container">
+  <div class="search-results">
+    <div class="result" ng-repeat="place in searchResults" ng-click="goTo(place)">
+      <p>{{ place.display_name }}</p>
+    </div>
+  </div>
+</div>
+
+<div id="map-element" class="map"></div>
+
+<div>
+  <p>EXHIBITIONS:</p>
+</div>
+
+<p>GALLERIES:</p>
+<div ng-repeat="gallery in galleries">
+  <a ng-click="panMap(gallery)">{{ gallery.name }}</a>
+</div>
+
 <div class="top-exhibitions">
   <p class="title is-2">Top rated exhibitions at the moment:</p>
 
