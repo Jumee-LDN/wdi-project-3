@@ -34,7 +34,9 @@ const userData = [
 
 const galleryIds = [
   '5be9bd11c7f4b190431791a6',
-  '5be9bd11c7f4b190431791a7'
+  '5be9bd11c7f4b190431791a7',
+  '5be9bd11c7f4b190431791a8',
+  '5be9bd11c7f4b190431791a9'
 ];
 
 const galleryData = [
@@ -42,15 +44,37 @@ const galleryData = [
     _id: galleryIds[0],
     name: 'Timothy Taylor',
     image: 'https://bit.ly/2QPJ5iK',
-    latlgn: { lat: 51.5, lgn: -0.14},
+    city: 'London',
+    country: 'UK',
+    latlgn: { lat: 51.51051, lgn: -0.14986},
     locationName: 'Mayfair'
   },
   {
     _id: galleryIds[1],
     name: 'Somerset House',
     image: 'https://bit.ly/2ONZkeE',
-    latlgn: { lat: 51.5, lgn: -0.11},
+    city: 'London',
+    country: 'UK',
+    latlgn: { lat: 51.51135, lgn: -0.11903},
     locationName: 'Temple'
+  },
+  {
+    _id: galleryIds[2],
+    name: 'MoMA',
+    image: 'https://bit.ly/2ldJoG7',
+    city: 'New York City',
+    country: 'USA',
+    latlgn: { lat: 40.76108, lgn: -73.97715},
+    locationName: 'Manhattan'
+  },
+  {
+    _id: galleryIds[3],
+    name: 'Palais de Tokyo',
+    image: 'https://bit.ly/2DA7Ko1',
+    city: 'Paris',
+    country: 'France',
+    latlgn: { lat: 48.86463, lgn: 2.29706},
+    locationName: 'Trocadéro'
   }
 ];
 
