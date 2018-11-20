@@ -53,12 +53,12 @@ function Router($stateProvider) {
     })
     .state('galleryEdit', {
       templateUrl: './views/galleries/galleryEdit.html',
-      url: '/galleries/:id/eidt',
+      url: '/galleries/:id/edit',
       controller: galleryEditCtrl
     })
     .state('exhibitionNew', {
       templateUrl: './views/exhibitions/exhibitionNew.html',
-      url: '/galleries/:id/new',
+      url: '/:galleryId/exhibitions/new',
       controller: exhibitionNewCtrl
     });
 }
