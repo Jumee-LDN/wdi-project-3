@@ -12,23 +12,67 @@
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   </head>
   <body ng-controller="mainCtrl">
-    <nav class="navbar">
-      <div class="navbar-start">
-        <a class="navbar-item">NAVBAR</a>
+
+    <nav class="navbar is-fixed-top">
+      <div class="navbar-brand">
+        <!-- <a class="navbar-item" href="#">
+          <img src="#" alt="#" width="112" height="28">
+        </a> -->
+        <!-- <div class="navbar-burger burger" data-target="navMenubd-example">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div> -->
+        <!-- <span id="nav-toggle" class="navbar-burger burger nav-toggle" data-target="navMenubd-example">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span> -->
       </div>
-      <div class="navbar-end">
-        <a class="navbar-item" ui-sref="home">Home</a>
-        <a class="navbar-item" ui-sref="galleryIndex">Galleries</a>
-        <a class="navbar-item" ng-if="isAuthenticated()" ui-sref="galleryNew">Add a gallery</a>
-        <!-- <a class="navbar-item" ui-sref="exhibitionIndex">Exhibitions</a> -->
-        <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="login">Login</a>
-        <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="register">Register</a>
-        <a ng-if="isAuthenticated()" ng-click="handleLogout()" class="navbar-item">Log out {{ username }}</a>
+
+      <div id="navMenubd-example" class="navbar-menu">
+        <div class="navbar-start">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link  is-active"  ui-sref="#" id="dropdown-link">BURGER</a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item" ui-sref="home">Home</a>
+              <a class="navbar-item" ui-sref="galleryIndex">Galleries</a>
+              <a class="navbar-item" ng-if="isAuthenticated()" ui-sref="galleryNew">Add a gallery</a>
+              <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="login">Login</a>
+              <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="register">Register</a>
+              <a ng-if="isAuthenticated()" ng-click="handleLogout()" class="navbar-item">Log out {{ username }}</a>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
-    <div class="container">
+
+
+    <!--
+
+      <nav class="navbar">
+        <div class="navbar-start">
+          <a class="navbar-item">NAVBAR</a>
+        </div>
+        <div class="navbar-end">
+          <a class="navbar-item" ui-sref="home">Home</a>
+          <a class="navbar-item" ui-sref="galleryIndex">Galleries</a>
+          <a class="navbar-item" ng-if="isAuthenticated()" ui-sref="galleryNew">Add a gallery</a>
+          <a class="navbar-item" ui-sref="exhibitionIndex">Exhibitions</a>
+          <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="login">Login</a>
+          <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="register">Register</a>
+          <a ng-if="isAuthenticated()" ng-click="handleLogout()" class="navbar-item">Log out {{ username }}</a>
+        </div>
+      </nav> -->
+
+
+
+
+    <div class="container is-fullhd">
       <div ui-view></div>
     </div>
+
     <div class="">
       This is footer
     </div>
