@@ -58,7 +58,7 @@ function Router($stateProvider) {
     })
     .state('exhibitionNew', {
       templateUrl: './views/exhibitions/exhibitionNew.html',
-      url: '/galleries/:galleryId/new',
+      url: '/exhibitions/:galleryId/new',
       controller: exhibitionNewCtrl
     });
 }
