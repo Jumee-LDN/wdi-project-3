@@ -21,6 +21,10 @@ const exhibitionSchema = mongoose.Schema({
   ]
 });
 
+exhibitionSchema.set('toJSON', {
+  virtuals: true
+});
+
 const exhibitionModel = mongoose.model('Exhibition', exhibitionSchema);
 
 module.exports = exhibitionModel;

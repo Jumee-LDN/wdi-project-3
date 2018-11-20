@@ -11,7 +11,8 @@ function createRoute(req, res, next){
       console.log('creating a comment', req.body);
       return exhibition.save();
     })
-    .then(exhibition => Exhibition.populate(exhibition, 'comments.commentAuthor'))
+    .then(exhibition => Exhibition.populate(exhibition,'comments.commentAuthor'))
+    .then(exhibition => Exhibition.populate(exhibition, 'gallery'))
     .then(exhibition => res.json(exhibition))
     .catch(next);
 }

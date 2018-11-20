@@ -16,10 +16,12 @@
 
     <div class="comments">
       <div ng-repeat="comment in exhibition.comments">
-        <span style="font-weight: bold;">{{ comment.commentAuthor.username.toUpperCase() }}</span>
+        <span style="font-weight: bold;">{{ comment.commentAuthor.username }}</span>
         <span>{{ comment.text }}</span>
         <!-- ng-if="comment.user._id === userId"  -->
-        <button class="delete-button" ng-click="deleteComment(comment)">x</button>
+
+        <button ng-if="comment.commentAuthor._id === userId" class="delete-button" ng-click="deleteComment(comment)">x</button>
+
       </div>
       <form ng-submit="createComment()">
         <input type="text" ng-model="comment.text">

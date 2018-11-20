@@ -13,6 +13,7 @@ function secureRoute(req, res, next) {
     if(err){
       res.status(401).json({ message: 'Unauthorised!' });
     } else {
+
       req.tokenUserId = jwt.decode(token).sub;
       next();
     }
@@ -46,9 +47,9 @@ router.route('/exhibitions/:id')
   .delete(secureRoute, exhibitionController.deleteRoute);
 
 router.route('/exhibitions/:exhibitionId/comments')
-  .post(commentController.createRoute);
+  .post(secureRoute, commentController.createRoute);
 
 router.route('/exhibitions/:exhibitionId/comments/:commentId')
-  .delete(commentController.deleteRoute);
+  .delete(secureRoute, commentController.deleteRoute);
 
 module.exports = router;
