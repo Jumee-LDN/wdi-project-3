@@ -7,6 +7,7 @@ import galleryNewCtrl from '../controllers/galleries/galleryNewCtrl';
 import galleryEditCtrl from '../controllers/galleries/galleryEditCtrl';
 import registerCtrl from '../controllers/auth/registerCtrl';
 import loginCtrl from '../controllers/auth/loginCtrl';
+import homeCtrl from '../controllers/homeCtrl';
 
 //INDIA:
 function Router($stateProvider) {
@@ -23,7 +24,8 @@ function Router($stateProvider) {
     })
     .state('home', {
       templateUrl: './views/home.html',
-      url: '/'
+      url: '/',
+      controller: homeCtrl
     })
     .state('exhibitionIndex', {
       templateUrl: './views/exhibitions/exhibitionIndex.html',

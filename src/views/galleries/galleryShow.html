@@ -1,6 +1,16 @@
-<h2>{{gallery.name}}</h2>
-<p>{{ gallery.locationName}}</p>
-<img src="{{ gallery.image }}" alt="{{ gallery.name }}">
+<div class="columns is-multiline is-12-desktop">
+  <div class="column is-multiline is-6-desktop">
+    <br>
+    <div class="column is-12-desktop"><h2 class="title is-2 has-text-centered">{{gallery.name}}</h2></div>
+    <div class="column is-12-desktop">  <p class="title is-3 has-text-centered">{{ gallery.locationName}}</p>
+    </div>
+    <div class="column is-12-desktop has-text-centered">  <button class="button" ng-if="isAuthenticated()" ui-sref="exhibitionNew({ galleryId: gallery._id })">ADD EXHIBITION ✚</button> </div>
+  </div>
+  <div class="column is-6-desktop">
+    <br>
+    <img class="circle is-centered" src="{{ gallery.image }}" alt="{{ gallery.name }}"></div>
+  </div>
+
 
 <div class="buttons" ng-if="isAuthenticated()">
   <button class="button is-info" ui-sref="galleryEdit({ id: gallery._id })">Edit</button>
@@ -8,8 +18,6 @@
 </div>
 
 <hr>
-
-<button class="button" ng-if="isAuthenticated()" ui-sref="exhibitionNew({ galleryId: gallery._id })">ADD EXHIBITION ✚</button>
 
 <hr>
 
