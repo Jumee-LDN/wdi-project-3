@@ -2,7 +2,7 @@
   <div class="column is-multiline is-6-desktop">
     <br>
     <div class="column is-12-desktop"><h2 class="title is-2 has-text-centered">{{gallery.name}}</h2></div>
-    <div class="column is-12-desktop">  <p class="title is-3 has-text-centered">{{ gallery.locationName}}</p>
+    <div class="column is-12-desktop">  <p class="title is-3 has-text-centered"> <i class="fas fa-map-marker-alt "> </i>  {{ gallery.locationName}}</p>
     </div>
     <div class="column is-12-desktop has-text-centered">  <button class="button" ng-if="isAuthenticated()" ui-sref="exhibitionNew({ galleryId: gallery._id })">ADD EXHIBITION ✚</button> </div>
   </div>
@@ -20,9 +20,13 @@
 <hr>
 
 <hr>
-
-<div ng-repeat="exhibition in gallery.exhibitionList" class="card column is-3-desktop" style="margin: 10px;">
-  <div>
-    <p><a ui-sref="exhibitionShow({ id: exhibition._id })">{{exhibition.name}}</a></p>
+<div class="columns is-multiline">
+  <div ng-repeat="exhibition in gallery.exhibitionList" class="card column is-3-desktop" style="margin: 10px;">
+    <div>
+      <a ui-sref="exhibitionShow({ id: exhibition._id })">
+        <p>{{exhibition.name}}</p>
+        <img src="{{ exhibition.image }}" alt="{{exhibition.name}}">
+      </a>
+    </div>
   </div>
 </div>
