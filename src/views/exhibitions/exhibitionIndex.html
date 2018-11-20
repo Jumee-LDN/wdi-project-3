@@ -12,6 +12,7 @@
   <div class="columns is-multiline is-centered">
 
     <div ng-repeat="exhibition in filteredExhibitions" class=" card column is-3-desktop" style="margin: 10px;">
+      
       <a ui-sref="exhibitionShow({ id: exhibition._id})">
         <p class="title is-4 has-text-centered"> <span class="bold">{{exhibition.name}}</span> </p>
         <p class=" content has-text-centered">{{exhibition.dates}}</p>

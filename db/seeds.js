@@ -36,7 +36,8 @@ const galleryIds = [
   '5be9bd11c7f4b190431791a6',
   '5be9bd11c7f4b190431791a7',
   '5be9bd11c7f4b190431791a8',
-  '5be9bd11c7f4b190431791a9'
+  '5be9bd11c7f4b190431791a9',
+  '5be9bd11c7f4b190431791a5'
 ];
 
 const galleryData = [
@@ -75,6 +76,15 @@ const galleryData = [
     country: 'France',
     latlgn: { lat: 48.86463, lgn: 2.29706},
     locationName: 'Trocadéro'
+  },
+  {
+    _id: galleryIds[4],
+    name: 'Saatchi Gallery',
+    image: 'https://media-cdn.tripadvisor.com/media/photo-s/03/0f/4d/f2/saatchi-gallery.jpg',
+    city: 'London',
+    country: 'England',
+    latlgn: { lat: 51.49148, lgn: -0.15997},
+    locationName: 'Chelsea'
   }
 ];
 

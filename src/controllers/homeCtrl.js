@@ -30,14 +30,14 @@ function homeCtrl($scope, $http) {
   };
 
   $scope.panMapE = function(exhibition) {
-    console.log('this is latitude', exhibition.gallery.latlgn.lat);
-    console.log('this is longitude', exhibition.gallery.latlgn.lgn);
-    const lat = exhibition.gallery.latlgn.lat
-    const lgn = exhibition.gallery.latlgn.lgn
-    mapLib.panTo([lat, lgn]);
-    mapLib.clearMarkers();
-    console.log('this is....', [lat, lgn]);
-    mapLib.addMarker([lat, lgn], `<strong>${exhibition.name} 🏛 </strong>`);
+    console.log('this is latitude', exhibition.gallery);
+    // console.log('this is longitude', exhibition.gallery.latlgn.lgn);
+  //   const lat = exhibition.gallery.latlgn.lat
+  //   const lgn = exhibition.gallery.latlgn.lgn
+  //   mapLib.panTo([lat, lgn]);
+  //   mapLib.clearMarkers();
+  //   console.log('this is....', [lat, lgn]);
+  //   mapLib.addMarker([lat, lgn], `<strong>${exhibition.name} 🏛 </strong>`);
   };
 
   $scope.findPlaces = function() {

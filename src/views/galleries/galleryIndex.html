@@ -1,6 +1,5 @@
-<h2>A List of Galleries</h2>
 
-<div ng-repeat="gallery in allGalleries" class="column is-4">
+<!-- <div ng-repeat="gallery in allGalleries" class="column is-4">
   <a ui-sref="galleryShow({ id: gallery._id })">
     <div class="card">
       <div class="card-header">
@@ -13,4 +12,35 @@
       </div>
     </div>
   </a>
-</div>
+</div> -->
+
+<div class="columns is-12-desktop is-mobile">
+
+  <div id="top" class="column is-multiline is-4-desktop" >
+    <div id="grey">
+      <strong>Discover...</strong>
+    </div>
+
+    <strong>Galleries</strong>
+    <div ng-repeat="gallery in allGalleries" class="column is-4">
+      <a ui-sref="galleryShow({ id: gallery._id })">
+          <div class="anchor">
+            <p>{{ gallery.name }}</p>
+          </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="columns is-multiline is-8-desktop topMargin">
+
+    <div id="row" ng-repeat="gallery in allGalleries" class="column is-6-desktop">
+            <div id="zoom" class="column is-11">
+              <img ng-src="{{ gallery.image }}" alt="{{ gallery.name }}">
+              <div class="zoom-overlay top"></div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<!-- style="background-color: red;" -->
+<!-- style="background-color: pink" -->
