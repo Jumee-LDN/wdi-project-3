@@ -1,7 +1,11 @@
 // NOTE: Don't need the underscore!!!
 @import 'partials/nav';
 @import 'partials/main';
-@import 'partials/footer';
+
+*{
+  background-color: inherit;
+
+}
 
 body {
 }

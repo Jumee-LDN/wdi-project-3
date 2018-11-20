@@ -3,7 +3,7 @@ import '@uirouter/angularjs';
 import 'bulma';
 import Router from './config/router';
 import 'satellizer';
-import './scss/main.scss';
+import './scss/style.scss';
 import mainCtrl from './controllers/mainCtrl';
 
 // function Router($stateProvider, $urlRouterProvider) {
