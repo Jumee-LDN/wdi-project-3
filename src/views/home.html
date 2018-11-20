@@ -7,8 +7,9 @@
 
 <section class="main">
   <div class=" title has-text-centered"> <p>The Map</p></div>
-  <div class="button" ng-click="findUser()">
-    <p>See where you are now 🐥</p>
+
+  <div ng-if="isAuthenticated()" class="button" ng-click="findUser()">
+    <p>{{username}}, see where you are 🐥</p>
   </div>
 
   <p >Search for locations:</p>

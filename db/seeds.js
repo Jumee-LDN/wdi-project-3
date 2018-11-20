@@ -37,7 +37,8 @@ const galleryIds = [
   '5be9bd11c7f4b190431791a7',
   '5be9bd11c7f4b190431791a8',
   '5be9bd11c7f4b190431791a9',
-  '5be9bd11c7f4b190431791a5'
+  '5be9bd11c7f4b190431791a5',
+  '5be9bd11c7f4b190431791a4'
 ];
 
 const galleryData = [
@@ -85,6 +86,15 @@ const galleryData = [
     country: 'England',
     latlgn: { lat: 51.49148, lgn: -0.15997},
     locationName: 'Chelsea'
+  },
+  {
+    _id: galleryIds[5],
+    name: 'SFMoMA',
+    image: 'https://s3-us-west-2.amazonaws.com/sfmomamedia/media/t/uploads/images/Z4H4ADFv6b-Y.jpg',
+    city: 'San Francisco',
+    country: 'USA',
+    latlgn: { lat: 37.78592, lgn: -122.40074},
+    locationName: '151 3rd St'
   }
 ];
 
@@ -151,6 +161,21 @@ const exhibitionData = [
     comments: [
       {
         text: 'This is something new.',
+        commentAuthor: userIds[0]
+      }
+    ]
+  },
+  {
+  //Review by India
+    name: 'New Work: Etel Adnan',
+    dates: 'September 1st 2018 – January 6th 2019',
+    rating: 7,
+    description: 'Born in Beirut, Lebanon, in 1925, visual artist, poet, and essayist Etel Adnan writes what must be communicated through language, and paints what cannot. While her earliest paintings favored pure abstraction, she is perhaps best known for her landscape works inspired by her long obsession with Mount Tamalpais. Adnan’s recent works once again return to abstraction, most specifically, color and its possibilities. A student of philosophy, Adnan came to Berkeley in 1955. As an active participant in Ann O’Hanlon’s Perception Workshops in Mill Valley in the 1960s, she developed her practice in dialogue with poets, experimental musicians, playwrights, and SFMOMA, at its original location in the War Memorial Veteran’s Building. Though she now resides in Paris, the Bay Area remained her home for more than fifty years, and was long the impetus behind her work. New Work: Etel Adnan presents new paintings and tapestries in SFMOMA’s first presentation of the artist’s work.',
+    image: 'https://s3-us-west-2.amazonaws.com/sfmomamedia/media/t/uploads/images/qADMFERgLBq-.png',
+    gallery: galleryIds[5],
+    comments: [
+      {
+        text: 'This is awesome',
         commentAuthor: userIds[0]
       }
     ]
