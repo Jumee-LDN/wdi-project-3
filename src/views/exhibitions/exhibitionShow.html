@@ -1,4 +1,3 @@
-
 <div class="columns show">
 
   <div class="column is-4 left">
@@ -19,11 +18,20 @@
       </div>
     </div>
   </div>
-    <hr>
+
+  <div class="has-text-centered column is-12-desktop">
+    <button class="button" ng-if="isAuthenticated()" ng-click="handleDelete()">DELETE EXHIBITION</button>
+    <button class="button" ui-sref="exhibitionEdit({ id: exhibition._id })">Edit</button>
+  </div>
+
+  <hr>
+
   <div class="comments column bottom is-multiline">
+
     <div class="column is-8 is-offset-2 ">
       <div class="card article">
         <div class="card-content">
+
           <div class="media">
             <div class="media-content has-text-centered">
               <p class="title article-title">What people said about this exhibition:</p>
@@ -42,16 +50,17 @@
             <hr>
           </div>
 
+          
+
           <form ng-if="isAuthenticated()" class="is-grouped" ng-submit="createComment()">
             <input type="text" class="input" ng-model="comment.text">
-            <hr>
             <button class="button is-centered">Comment</button>
           </form>
+
         </div>
       </div>
     </div>
 
-    <div class="has-text-centered column is-12-desktop">
-      <button class="button" ng-if="isAuthenticated()" ng-click="handleDelete()">DELETE EXHIBITION</button>
-      <button class="button" ui-sref="exhibitionEdit({ id: exhibition._id })">Edit</button>
-    </div>
+  </div>
+
+</div>
