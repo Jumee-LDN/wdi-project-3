@@ -1,0 +1,32 @@
+.welcome-section {
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://bit.ly/2DQ2CNo);
+  background-size: cover;
+  background-position-x: center;
+  background-color: none;
+  text-align: center;
+
+  .title{
+    @extend %mid-title-set;
+    font-weight: 300;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+
+    .app-name {
+      font-weight: 700;
+      font-size: 6rem;
+      border-top: 4px solid white;
+      border-bottom: 4px solid white;
+      line-height: 8rem;
+    }
+
+    .welcome-message {
+      font-size: 1.3rem;
+      padding-top: 1rem;
+      line-height: 2rem;
+    }
+    color: white;
+  }
+}

@@ -1,11 +1,13 @@
-// %big-title-set {
-//   // font-family: $brandFont;
-//   font-size: 50px;
-//   // font-weight: 700;
-// }
+%mid-title-set {
+  font-family: 'Merriweather', serif;
+  font-size: 3rem;
+  // font-weight: 700;
+}
 // NOTE: Don't need the underscore!!!
 @import 'partials/nav';
 @import 'partials/main';
+@import 'partials/main_welcome';
+@import 'partials/footer';
 
 *{
   // background-color: inherit;

@@ -113,7 +113,7 @@ const exhibitionData = [
     dates: 'Until Sunday Jan 27 2019',
     rating: 8,
     description: 'Flayed skin and dislocated shoulders are two recurring themes of Jusepe de Ribera’s art. The first, normally inflicted on Christian saints as part of their martyrdoms, and the second, the result of a foul seventeenth-century torture device known as the ‘strappado’.',
-    image: 'https://bit.ly/2DyrHeE',
+    image: 'https://bit.ly/2R0ghV9',
     gallery: galleryIds[0],
     comments: [
       {

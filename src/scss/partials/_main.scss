@@ -3,7 +3,23 @@
   z-index: 0;
 }
 .main{
-  padding: 200px;
+  padding: 100px 200px 50px 200px;
+}
+
+.map-search {
+  padding: 50px;
+  height: 100%;
+  background-color: #0e0e0e;
+  h2{
+    color: white;
+  }
+  #input-area {
+    input {
+      width: 450px;
+    }
+    padding: 15px;
+
+  }
 }
 #top{
   .anchor{
@@ -23,22 +39,8 @@
 #zoom{
 
 }
-.welcome-section {
-  height: 800px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(https://bit.ly/2DQ2CNo);
-  background-size: cover;
-  background-position-x: center;
-  background-color: none;
-  .title{
-    color: white;
-  }
-}
 .map-section {
   height: 300px;
-  background-color: blue;
 }
 
 .circle{
@@ -97,5 +99,13 @@
     font-size: 30px;
     font-family: helvetica;
     color: silver;
+  }
+}
+
+#featured-exhibitions-section {
+  padding: 0;
+  padding-bottom: 50px;
+  #featured-exhibitions {
+    width: inherit;
   }
 }
