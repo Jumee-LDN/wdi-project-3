@@ -11,40 +11,45 @@
 </div>
 <main class="homeStyle">
   <section class="main">
-    <div class="about column has-text-centered">
-    <strong class="xhibitTitle">About Xhibit</strong>
-    <hr>
-    </div>
-    <div class="about aboutBottom column has-text-centered">
-    <p>Founded in 2015 by Indimee, Xhibit is one of the world’s leading international contemporary review sites, dedicated to expanding contemporary art’s audience and reach. We believe that art plays a vital role in inspiring a richer, more profound understanding of human experience, culture and society today. Aimed at both a specialist and a general audience, Xhibit features a mixture of criticism, reviews, reportage and specially commissioned artworks, and offers the most established, in-depth and intimate portrait of international contemporary art in all its shapes and forms. </p>
+    <div class="about">
+      <div class="column has-text-centered">
+        <strong class="xhibitTitle">About Xhibit</strong>
+        <hr>
+      </div>
+      <div class="aboutBottom column has-text-centered">
+        <p>Founded in 2015 by Indimee, Xhibit is one of the world’s leading international contemporary review sites, dedicated to expanding contemporary art’s audience and reach. We believe that art plays a vital role in inspiring a richer, more profound understanding of human experience, culture and society today. Aimed at both a specialist and a general audience, Xhibit features a mixture of criticism, reviews, reportage and specially commissioned artworks, and offers the most established, in-depth and intimate portrait of international contemporary art in all its shapes and forms. </p>
+      </div>
     </div>
 
     <section class="section" id="featured-exhibitions-section">
       <div class="container has-text-centered" id="featured-exhibitions">
         <h2 class="title">Featured exhibitions</h2>
-        <div class="columns is-centered" style="padding: 2rem">
-          <div class="column" ng-if=" exhibition.rating > 6" ng-repeat="exhibition in allExhibitions">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="{{ exhibition.image }}" alt="This is{{exhibition.name}}">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <a ui-sref="exhibitionShow({ id: exhibition._id})">
-                      <p class="title is-4 has-text-centered"> <span class="bold">{{exhibition.name}}</span> </p>
-                      <p class="subtitle is-6 has-text-centered">{{exhibition.dates}}</p>
-                    </a>
+        <hr>
+        <div class="columns is-multiline is-centered" style="padding: 2rem">
+          <div class="column is-4" ng-repeat="exhibition in allExhibitions | filter : featuredExhibitions | limitTo : 3">
+            <div>
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="{{ exhibition.image }}" alt="This is{{exhibition.name}}">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <a ui-sref="exhibitionShow({ id: exhibition._id})">
+                        <p class="title is-4 has-text-centered"> <span class="bold">{{exhibition.name}}</span> </p>
+                        <p class="subtitle is-6 has-text-centered">Until {{exhibition.dates}}</p>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="content">
-                <p>{{ exhibition.summary}}</p>
-                <a>@gallery</a>.
-                <a href="#">#artist</a>
-                <a href="#">#city</a>
+                <div class="content">
+                  <p>{{ exhibition.summary}}</p>
+                  <a>@gallery</a>.
+                  <a href="#">#artist</a>
+                  <a href="#">#city</a>
+                </div>
               </div>
             </div>
           </div>
@@ -54,7 +59,7 @@
 
 
     <section class="map-search">
-      <div class=" title has-text-centered"> <h2 class="title">The Xhibit Map</h2></div>
+      <div class=" title has-text-centered" id="map-tt-area"> <h2 class="title">The Xhibit Map</h2></div>
       <div class="field has-addons is-grouped is-grouped-centered" id="input-area">
         <div class="control">
           <input class="input" ng-model="searchTerm" ng-change="findPlaces()" placeholder="Search for locations">

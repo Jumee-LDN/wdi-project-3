@@ -18,6 +18,10 @@ function homeCtrl($scope, $http) {
     mapLib.create('map-element', [51.515, -0.072], 14);
   });
 
+  $scope.featuredExhibitions = function(exhibition){
+    return exhibition.rating > 6;
+  };
+
   $scope.panMap = function(gallery) {
     const lat = gallery.latlgn.lat;
     const lgn = gallery.latlgn.lgn;
