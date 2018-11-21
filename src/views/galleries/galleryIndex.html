@@ -23,6 +23,7 @@
               <img ng-src="{{ gallery.image }}" alt="{{ gallery.name }}">
               <div class="zoom-overlay top"></div>
             </div> -->
+          <a ui-sref="galleryShow({ id: gallery._id })"
             <div id="zoom" class="card large">
                 <div class="card-image">
                     <figure class="image">
@@ -30,6 +31,7 @@
                         <div class="zoom-overlay top"></div>
                     </figure>
                 </div>
+              </a>
         </div>
     </div>
   </div>

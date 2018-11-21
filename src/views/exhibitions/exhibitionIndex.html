@@ -33,12 +33,12 @@
                     </div>
                     <div class="media-content">
                         <p id="exhibition" class="title is-4 no-padding">{{ exhibition.name }}</p>
-                        <p><span class="title is-6"><a href="http://twitter.com/#">@{{ exhibition.gallery.name }}</a></span></p>
+                        <p><span class="title is-6"><a ui-sref="galleryShow({ id: exhibition.gallery._id})">@{{ exhibition.gallery.name }}</a></span></p>
                         <p class="subtitle is-6">Rating: {{ exhibition.rating }}</p>
                     </div>
                 </div>
                 <div class="content">
-                    {{exhibition.description}}
+                    {{exhibition.summary}}
                     <div class="background-icon"><span class="icon-facebook"></span></div>
                 </div>
             </div>

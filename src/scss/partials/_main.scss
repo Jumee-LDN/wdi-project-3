@@ -1,5 +1,5 @@
 .page, #galleryIndex, #exhibitionIndex {
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 #exhibitionIndex{
   padding-top: 40px;
@@ -7,10 +7,30 @@
   .xhibit{
     font-size: 30px;
     padding-bottom: 30px;
+    padding-top: 40px;
+  }
+}
+.show{
+  font-family: 'Merriweather', serif;
+  padding-top: 150px;
+  padding-bottom: 80px;
+  .left{
+    padding-left: 20px;
+  }
+}
+.bottom{
+  padding-bottom: 100px;
+  font-family: 'Merriweather', serif;
+}
+
+.black{
+  color: grey !important;
+  :hover{
+    color: black;
   }
 }
 
-#exhibition{
+#exhibition, #blue {
   background-image: linear-gradient(to right, rgba(147, 198, 247, 0.5) 0%, rgba(147, 198, 247, 0.5) 100%);
   background-position: 0 0.84em;
   background-repeat: repeat-x;
@@ -55,9 +75,7 @@
 .topMargin{
   margin-top: 50px;
 }
-#zoom{
 
-}
 .map-section {
   height: 300px;
 }
@@ -102,6 +120,7 @@
 }
 #zoom img {
   max-width: 100%;
+  max-height: 100%;
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
