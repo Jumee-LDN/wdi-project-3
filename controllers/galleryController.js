@@ -3,6 +3,7 @@ const Gallery = require('../models/gallery');
 function indexRoute(req, res, next) {
   Gallery
     .find()
+    .populate('galleries')
     .then(galleries => res.json(galleries))
     .catch(next);
 }

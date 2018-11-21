@@ -5,6 +5,7 @@ const exhibitionSchema = mongoose.Schema({
   dates: String,
   rating: Number,
   description: String,
+  summary: String,
   image: String,
   gallery: {
     type: mongoose.Schema.ObjectId,

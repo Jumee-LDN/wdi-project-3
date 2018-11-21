@@ -3,6 +3,7 @@ const Exhibition = require('../models/exhibition');
 function indexRoute(req, res, next){
   Exhibition
     .find()
+    .populate('gallery')
     .then(exhibitions => {
       res.json(exhibitions);
     })

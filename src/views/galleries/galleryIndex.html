@@ -1,20 +1,5 @@
 
-<!-- <div ng-repeat="gallery in allGalleries" class="column is-4">
-  <a ui-sref="galleryShow({ id: gallery._id })">
-    <div class="card">
-      <div class="card-header">
-        {{ gallery.name }}
-      </div>
-      <div class="card-image">
-        <figure class="image">
-          <img ng-src="{{ gallery.image }}" alt="{{ gallery.name }}">
-        </figure>
-      </div>
-    </div>
-  </a>
-</div> -->
-
-<div class="columns is-12-desktop is-mobile">
+<div id="galleryIndex" class="columns is-12-desktop is-mobile">
 
   <div id="top" class="column is-multiline is-4-desktop" >
     <div id="grey">
@@ -34,13 +19,19 @@
   <div class="columns is-multiline is-8-desktop topMargin">
 
     <div id="row" ng-repeat="gallery in allGalleries" class="column is-6-desktop">
-            <div id="zoom" class="column is-11">
+            <!-- <div id="zoom" class="column is-11">
               <img ng-src="{{ gallery.image }}" alt="{{ gallery.name }}">
               <div class="zoom-overlay top"></div>
-            </div>
+            </div> -->
+          <a ui-sref="galleryShow({ id: gallery._id })"
+            <div id="zoom" class="card large">
+                <div class="card-image">
+                    <figure class="image">
+                        <img class="image" id="cover" src="{{ gallery.image }}" alt="Image">
+                        <div class="zoom-overlay top"></div>
+                    </figure>
+                </div>
+              </a>
         </div>
     </div>
   </div>
-
-<!-- style="background-color: red;" -->
-<!-- style="background-color: pink" -->

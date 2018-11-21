@@ -1,28 +1,49 @@
 
-<section class="columns is-multiline">
-  <div class="column is-12-desktop has-text-centered">
+<section id="exhibitionIndex" class="columns is-multiline page">
+<div class="column is-12-desktop">
+  <p class="xhibit">Explore Xhibit's list on whats on now...</p>
+</div>
+
+  <div class="column is-8-desktop is-grouped">
     <form ng-submit="handleFilterSubmit()">
-      <label class="title is-4 searchbar" for="/">Search for a Exhibitions:</label>
-      <input type="text" class="input" ng-model="searchTerm">
-      <button class="button is-info">🔍</button>
-      <hr>
+      <div class="is-5">
+        <label class="is-4 searchbar" for="/">Search for a Exhibitions:</label>
+        <input type="text" class="input" ng-model="searchTerm">
+      </div>
+      <!-- <div class="is-2"> <button class="button">Search</button></div> -->
     </form>
   </div>
 
+
   <div class="columns is-multiline is-centered">
-
-    <div ng-repeat="exhibition in filteredExhibitions" class=" card column is-3-desktop" style="margin: 10px;">
-
+    <div ng-repeat="exhibition in filteredExhibitions" class="column is-one-third">
       <a ui-sref="exhibitionShow({ id: exhibition._id})">
-        <p class="title is-4 has-text-centered"> <span class="bold">{{exhibition.name}}</span> </p>
-        <p class=" content has-text-centered">{{exhibition.dates}}</p>
-
-        <div class="card-image">
-          <img src="{{ exhibition.image }}" alt="This is{{exhibition.name}}">
-        </div>
-        <div class="card-content">
+        <div class="card large">
+            <div class="card-image">
+                <figure class="image">
+                    <img src="{{ exhibition.image }}" alt="Image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-96x96">
+                            <img src="{{ exhibition.gallery.image }}">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p id="exhibition" class="title is-4 no-padding">{{ exhibition.name }}</p>
+                        <p><span class="title is-6"><a ui-sref="galleryShow({ id: exhibition.gallery._id})">@{{ exhibition.gallery.name }}</a></span></p>
+                        <p class="subtitle is-6">Rating: {{ exhibition.rating }}</p>
+                    </div>
+                </div>
+                <div class="content">
+                    {{exhibition.summary}}
+                    <div class="background-icon"><span class="icon-facebook"></span></div>
+                </div>
+            </div>
         </div>
         </a>
-      </div>
+    </div>
     </div>
 </section>
