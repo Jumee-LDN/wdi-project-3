@@ -24,19 +24,29 @@ function homeCtrl($scope, $http) {
     mapLib.panTo([lat, lgn]);
     mapLib.clearMarkers();
     console.log('this is....', [lat, lgn]);
-    // TODO: Rob looking into this
-    mapLib.addMarker([lat, lgn], `<strong><a ui-sref="galleryShow({ id: gallery._id })">${gallery.name} 🏛 </a></strong>`);
+    const myDiv = document.createElement('div');
+    myDiv.innerHTML = `${gallery.name}🏛`;
+    myDiv.addEventListener('click', function(){
+      window.location.href = `http://localhost:8000/#!/galleries/${gallery._id}`
+    });
+    mapLib.addMarker([lat, lgn], myDiv);
   };
 
   $scope.panMapE = function(exhibition) {
     console.log('this is latitude', exhibition.gallery);
     console.log('this is longitude', exhibition.gallery.latlgn.lgn);
+    console.log('this is ID', exhibition);
     const lat = exhibition.gallery.latlgn.lat;
     const lgn = exhibition.gallery.latlgn.lgn;
     mapLib.panTo([lat, lgn]);
     mapLib.clearMarkers();
     console.log('this is....', [lat, lgn]);
-    mapLib.addMarker([lat, lgn], `<strong><a ui-sref="exhibitionShow({ id: exhibition.gallery._id })">${exhibition.name} at (the) ${exhibition.gallery.name}🏛 </a></strong>`);
+    const myDiv = document.createElement('div');
+    myDiv.innerHTML = `${exhibition.name} at (the) ${exhibition.gallery.name}🏛`;
+    myDiv.addEventListener('click', function(){
+      window.location.href = `http://localhost:8000/#!/exhibitions/${exhibition._id}`
+    });
+    mapLib.addMarker([lat, lgn], myDiv);
   };
 
   $scope.findPlaces = function() {
