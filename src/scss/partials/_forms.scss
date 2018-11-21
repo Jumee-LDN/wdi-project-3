@@ -1,0 +1,27 @@
+
+.form-section {
+  .avatar {
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    padding-bottom: 1rem;
+  }
+  padding: 3rem 0 10rem 0;
+  // background-image: url(https://bit.ly/2DQ2CNo);
+  // background-position: center;
+  .form-title-area {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  #from-box {
+    border: 1px #dbdbdb solid;
+    border-radius: 25px;
+    padding: 2rem;
+    #submit-button {
+      background-color: purple;
+    }
+  }
+}

@@ -1,3 +1,7 @@
+$xhibit-black: #252527;
+$xhibit-colour: #7775da;
+$xhibit-colour-light: #c8c7ff;
+
 %mid-title-set {
   font-family: 'Merriweather', serif;
   font-size: 3rem;
@@ -8,6 +12,8 @@
 @import 'partials/main';
 @import 'partials/main_welcome';
 @import 'partials/footer';
+@import 'partials/forms';
+
 
 *{
   // background-color: inherit;
