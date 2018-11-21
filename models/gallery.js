@@ -5,6 +5,7 @@ const gallerySchema = mongoose.Schema({
   image: String,
   city: String,
   country: String,
+  description: String,
   latlgn: {
     lat: Number,
     lgn: Number

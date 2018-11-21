@@ -6,6 +6,7 @@ function createRoute(req, res, next){
   Exhibition
     .findById(req.params.exhibitionId)
     .then(exhibition => {
+      console.log('this is exhibition', exhibition)
       req.body.commentAuthor = req.tokenUserId;
       exhibition.comments.push(req.body);
       console.log('creating a comment', req.body);

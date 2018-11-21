@@ -19,25 +19,24 @@ function homeCtrl($scope, $http) {
   });
 
   $scope.panMap = function(gallery) {
-    console.log('this is latitude', gallery.latlgn.lat);
-    console.log('this is longitude', gallery.latlgn.lgn);
-    const lat = gallery.latlgn.lat
-    const lgn = gallery.latlgn.lgn
+    const lat = gallery.latlgn.lat;
+    const lgn = gallery.latlgn.lgn;
     mapLib.panTo([lat, lgn]);
     mapLib.clearMarkers();
     console.log('this is....', [lat, lgn]);
-    mapLib.addMarker([lat, lgn], `<strong>${gallery.name} 🏛 </strong>`);
+    // TODO: Rob looking into this
+    mapLib.addMarker([lat, lgn], `<strong><a ui-sref="galleryShow({ id: gallery._id })">${gallery.name} 🏛 </a></strong>`);
   };
 
   $scope.panMapE = function(exhibition) {
     console.log('this is latitude', exhibition.gallery);
     console.log('this is longitude', exhibition.gallery.latlgn.lgn);
-    const lat = exhibition.gallery.latlgn.lat
-    const lgn = exhibition.gallery.latlgn.lgn
+    const lat = exhibition.gallery.latlgn.lat;
+    const lgn = exhibition.gallery.latlgn.lgn;
     mapLib.panTo([lat, lgn]);
     mapLib.clearMarkers();
     console.log('this is....', [lat, lgn]);
-    mapLib.addMarker([lat, lgn], `<strong>${exhibition.name} at (the) ${exhibition.gallery.name}🏛 </strong>`);
+    mapLib.addMarker([lat, lgn], `<strong><a ui-sref="exhibitionShow({ id: exhibition.gallery._id })">${exhibition.name} at (the) ${exhibition.gallery.name}🏛 </a></strong>`);
   };
 
   $scope.findPlaces = function() {
@@ -58,11 +57,11 @@ function homeCtrl($scope, $http) {
   };
 
   $scope.findUser = function() {
-  navigator.geolocation.getCurrentPosition(function(result) {
-    mapLib.panTo([result.coords.latitude, result.coords.longitude]);
-    mapLib.addMarker([result.coords.latitude, result.coords.longitude], 'This is you 🐥');
-  });
-};
+    navigator.geolocation.getCurrentPosition(function(result) {
+      mapLib.panTo([result.coords.latitude, result.coords.longitude]);
+      mapLib.addMarker([result.coords.latitude, result.coords.longitude], 'This is you 🐥');
+    });
+  };
 }
 
 

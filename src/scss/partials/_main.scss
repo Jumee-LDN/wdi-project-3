@@ -19,9 +19,14 @@
     margin-right: 60px;
   }
 }
-.bottom{
+.bottom, .gallery, .homeStyle {
   padding-bottom: 100px;
   font-family: 'Merriweather', serif;
+}
+
+
+.gallery, .topMargin{
+  padding-top: 60px;
 }
 
 .black{
@@ -88,7 +93,6 @@
 }
 .result-container {
   position: relative;
-  // border-top: grey solid 1px;
 }
 
 .search-results {
@@ -103,9 +107,19 @@
     border-bottom: grey solid 1px;
   }
   :hover {
-    background-color: grey;
-    color: white;
+    background-color: $xhibit-skyblue;
+    color: navy;
   }
+}
+.search-list{
+  color: white !important;
+}
+.titles{
+  font-size: 30px;
+}
+
+.hovers:hover{
+  color: $xhibit-colour;
 }
 
 #zoom {
@@ -136,10 +150,10 @@
 #grey{
   margin-top: 100px;
   margin-bottom: 40px;
-  strong {
-    font-size: 30px;
-    font-family: helvetica;
-    color: silver;
+  font-family:'Merriweather', serif;;
+  .grey{
+    padding-bottom: 30px;
+    font-size: 20px;
   }
 }
 
@@ -149,4 +163,7 @@
   #featured-exhibitions {
     width: inherit;
   }
+}
+.bold{
+  color: white !important;
 }
