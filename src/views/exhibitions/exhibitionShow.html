@@ -13,13 +13,13 @@
       </div>
     </div>
 
-    <div class="columns">
+    <div class="columns picture">
       <div class="card-image column is-12-desktop">
         <img src="{{ exhibition.image }}" alt="This is{{exhibition.name}}">
       </div>
     </div>
   </div>
-
+    <hr>
   <div class="comments column bottom is-multiline">
     <div class="column is-8 is-offset-2 ">
       <div class="card article">
@@ -28,7 +28,7 @@
             <div class="media-content has-text-centered">
               <p class="title article-title">What people said about this exhibition:</p>
               <div class="tags has-addons level-item">
-                <span class="tag is-rounded is-info">@{{exhibition.gallery.name}}</span>
+                <button class="tag is-rounded span"><a class="black" ui-sref="galleryShow({ id: exhibition.gallery._id})">@{{exhibition.gallery.name}}</a></button>
                 <span class="tag is-rounded">Xhibit-reviews</span>
               </div>
               <hr>
@@ -53,5 +53,5 @@
 
     <div class="has-text-centered column is-12-desktop">
       <button class="button" ng-if="isAuthenticated()" ng-click="handleDelete()">DELETE EXHIBITION</button>
-      <button class="button is-info" ui-sref="exhibitionEdit({ id: exhibition._id })">Edit</button>
+      <button class="button" ui-sref="exhibitionEdit({ id: exhibition._id })">Edit</button>
     </div>

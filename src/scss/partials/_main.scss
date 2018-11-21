@@ -16,6 +16,7 @@
   padding-bottom: 80px;
   .left{
     padding-left: 20px;
+    margin-right: 60px;
   }
 }
 .bottom{
@@ -29,7 +30,9 @@
     color: black;
   }
 }
-
+.span{
+  background-color: rgba(147, 198, 247, 0.5) !important;
+}
 #exhibition, #blue {
   background-image: linear-gradient(to right, rgba(147, 198, 247, 0.5) 0%, rgba(147, 198, 247, 0.5) 100%);
   background-position: 0 0.84em;
