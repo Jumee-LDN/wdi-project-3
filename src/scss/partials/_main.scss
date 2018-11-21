@@ -1,6 +1,22 @@
-// body{
-//   background-color: #fafafa;
-// }
+.page, #galleryIndex, #exhibitionIndex {
+  padding-bottom: 40px;
+}
+#exhibitionIndex{
+  padding-top: 40px;
+  font-family: 'Merriweather', serif;
+  .xhibit{
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+#exhibition{
+  background-image: linear-gradient(to right, rgba(147, 198, 247, 0.5) 0%, rgba(147, 198, 247, 0.5) 100%);
+  background-position: 0 0.84em;
+  background-repeat: repeat-x;
+  background-size: 1px 10px;
+}
+
 .map {
   height: 450px;
   z-index: 0;
