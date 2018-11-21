@@ -69,7 +69,7 @@ function Router($stateProvider) {
       templateUrl: './views/exhibitions/exhibitionNew.html',
       url: '/galleries/:galleryId/new',
       controller: exhibitionNewCtrl
-    })
+    });
 //     .state('map', {
 //       templateUrl: './views/map.html',
 //       url: '/map',

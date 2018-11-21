@@ -1,5 +1,6 @@
 
 function exhibitionShowCtrl($scope, $http, $state) {
+  $scope.comment = {};
   $http({
     method: 'GET',
     url: `/api/exhibitions/${$state.params.id}`
@@ -21,7 +22,16 @@ function exhibitionShowCtrl($scope, $http, $state) {
       method: 'POST',
       url: `/api/exhibitions/${$state.params.id}/comments`,
       data: $scope.comment
-    }).then(result => $scope.exhibition = result.data);
+    }).then(result => {
+      console.log('$scope.exhibition is: ', $scope.exhibition);
+      console.log('result.data is: ', result.data);
+
+      $scope.exhibition = result.data;
+
+      $scope.comment.text = null;
+
+    });
+
   };
 
   $scope.deleteComment = function(comment) {
