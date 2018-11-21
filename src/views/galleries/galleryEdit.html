@@ -1,9 +1,113 @@
-<h1 class="title is-1">Edit your Gallery</h1>
-<form ng-submit="handleSubmit()">
-  <input ng-model="gallery.name" placeholder="Gallery Name">
-  <input ng-model="gallery.image" placeholder="Gallery Image">
-  <input ng-model="gallery.latlgn.lat" placeholder="Gallery lat">
-  <input ng-model="gallery.latlgn.lgn" placeholder="Gallery lgn">
-  <input ng-model="gallery.locationName" placeholder="Gallery Location">
-  <button class="button is-link">Edit</button>
+<form ng-submit="handleSubmit()" class="form-section">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+
+        <div class="form-title-area">
+          <h2 class="title">Edit Gallery</h2>
+        </div>
+
+        <div class="column is-half is-offset-one-quarter is-centered" id="from-box">
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Gallery Name</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input" ng-model="gallery.name" placeholder="Gallery Name">
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Upload Image</label>
+            </div>
+            <div class="field-body">
+              <div class="field is-expanded">
+                <div class="field has-addons">
+                  <p class="control">
+                    <a class="button is-static">
+                      url
+                    </a>
+                  </p>
+                  <p class="control is-expanded">
+                    <input class="input" ng-model="gallery.image" placeholder="https://gallery.com/image.jpg">
+                  </p>
+                </div>
+                <p class="help">Please enter full image url</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Gallery Loaction</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input" step="-1.12346789" ng-model="gallery.latlgn.lat" placeholder="latitude" type="number">
+                </p>
+              </div>
+
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input" step="-1.12346789" ng-model="gallery.latlgn.lgn" placeholder="longitude" type="number">
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Location Name</label>
+            </div>
+            <div class="field-body">
+              <div class="field is-expanded">
+                <div class="field has-addons">
+                  <p class="control is-expanded">
+                    <input class="input" ng-model="gallery.locationName" placeholder="Midtown">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Rate</label>
+            </div>
+            <div class="field-body">
+              <div class="field is-narrow">
+                <div class="control">
+                  <input class="input" ng-model="gallery.rating" type="number" min="1" max="10" placeholder="5">
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+
+          <div class="field is-horizontal">
+            <div class="field-label">
+              <!-- Left empty for spacing -->
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <button class="button" id="submit-button">
+                    Edit Gallery
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
 </form>
