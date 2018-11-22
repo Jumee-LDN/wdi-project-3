@@ -4,7 +4,7 @@ function userProfileCtrl ($state, $scope, $http){
     url: `/api/users/${$state.params.id}`
   }).then(result => {
     $scope.user = result.data;
-    console.log('this is user', $scope.user)
+    console.log('this is user', $scope.user);
   });
 }
 

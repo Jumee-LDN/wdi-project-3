@@ -6,6 +6,14 @@
   padding-bottom: 60px;
 }
 
+#userProfile{
+  min-height: 600px;
+  padding-top: 85px;
+  .list{
+    padding: 5px;
+  }
+}
+
 .about {
   padding: 50px;
   height: 500px;

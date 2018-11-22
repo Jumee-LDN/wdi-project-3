@@ -86,6 +86,7 @@ function Router($urlRouterProvider, $stateProvider) {
       url: '/users/:id',
       controller: userProfileCtrl
     });
+
   // NOTE: Redirect to home whenever the url is invalid.
   //       This also adds the #! for us if it's not there!
   $urlRouterProvider.otherwise('/');
