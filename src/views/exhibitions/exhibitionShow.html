@@ -3,6 +3,9 @@
   <div class="column is-4 left">
     <div class="column is-desktop">
       <h1 class="title is-2 has-text-centered"><span id="blue" >{{exhibition.name}}</span></h1>
+      <button class="button" ng-click="bookmarkExhibition()">🐣</button>
+      <!-- ng-if(user.bookmarks.includes(id)) -->
+
       <p class="has-text-centered" >Until {{exhibition.dates}}</p>
       <a ui-sref="galleryShow({ id: exhibition.gallery._id})" class="black">
         <p class="has-text-centered" >{{ exhibition.gallery.name }}</p></a>
@@ -50,7 +53,7 @@
             <hr>
           </div>
 
-          
+
 
           <form ng-if="isAuthenticated()" class="is-grouped" ng-submit="createComment()">
             <input type="text" class="input" ng-model="comment.text">

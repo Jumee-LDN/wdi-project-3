@@ -8,6 +8,16 @@ function exhibitionShowCtrl($scope, $http, $state) {
     $scope.exhibition = result.data;
   });
 
+  $scope.bookmarkExhibition = function(){
+    $http({
+      method: 'POST',
+      url: `/api/exhibitions/${$state.params.id}/bookmark`
+    }).then(result => {
+      $scope.exhibition = result.data;
+      console.log('this is $scope.exhibition', $scope.exhibition);
+    });
+  };
+
   $scope.handleDelete = function(){
     console.log('You got this far, yay!');
     $http({

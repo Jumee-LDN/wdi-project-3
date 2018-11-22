@@ -18,6 +18,16 @@ userSchema.methods.validatePassword = function(attemptedPassword){
   return bcrypt.compareSync(attemptedPassword, this.password);
 };
 
+userSchema.virtual('bookmarkedByMe', {
+  ref: 'Exhibition',
+  localField: '_id',
+  foreignField: 'bookmarked'
+});
+
+userSchema.set('toJSON', {
+  virtuals: true
+});
+
 
 const userModel = mongoose.model('User', userSchema);
 

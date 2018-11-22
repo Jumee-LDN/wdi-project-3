@@ -8,6 +8,7 @@ import galleryEditCtrl from '../controllers/galleries/galleryEditCtrl';
 import registerCtrl from '../controllers/auth/registerCtrl';
 import loginCtrl from '../controllers/auth/loginCtrl';
 import homeCtrl from '../controllers/homeCtrl';
+import userProfileCtrl from '../controllers/auth/userProfileCtrl';
 import exhibitionEditCtrl from '../controllers/exhibitions/exhibitionEditCtrl';
 // import mapCtrl from '../controllers/mapCtrl';
 
@@ -69,13 +70,12 @@ function Router($stateProvider) {
       templateUrl: './views/exhibitions/exhibitionNew.html',
       url: '/galleries/:galleryId/new',
       controller: exhibitionNewCtrl
+    })
+    .state('userProfile',{
+      templateUrl: './views/auth/userProfile.html',
+      url: '/users/:id',
+      controller: userProfileCtrl
     });
-//     .state('map', {
-//       templateUrl: './views/map.html',
-//       url: '/map',
-//       controller: mapCtrl
-//     });
-// }
 }
 
 export default Router;
