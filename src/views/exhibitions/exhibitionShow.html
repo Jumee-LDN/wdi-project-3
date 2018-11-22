@@ -3,8 +3,15 @@
   <div class="column is-4 left">
     <div class="column is-desktop">
       <h1 class="title is-2 has-text-centered"><span id="blue" >{{exhibition.name}}</span></h1>
-      <button class="button" ng-click="bookmarkExhibition()">🐣</button>
-      <!-- ng-if(user.bookmarks.includes(id)) -->
+
+<!-- if bookmarked array includes your id, you can remove it -->
+      <div ng-if="exhibition.bookmarked.includes(userId)">
+        <button class="button" ng-click="removeBookmark()"><i class="fas fa-bookmark"></i></button>
+      </div>
+<!-- if your id isnt in the bookmarked array of this exhibition, you can bookmark it -->
+      <div ng-if="!exhibition.bookmarked.includes(userId)">
+        <button class="button" ng-click="bookmarkExhibition()"><i class="far fa-bookmark"></i></button>
+      </div>
 
       <p class="has-text-centered" >Until {{exhibition.dates}}</p>
       <a ui-sref="galleryShow({ id: exhibition.gallery._id})" class="black">

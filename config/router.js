@@ -57,6 +57,9 @@ router.route('/exhibitions/:exhibitionId/comments/:commentId')
 router.route('/exhibitions/:exhibitionId/bookmark')
   .post(secureRoute, bookmarkController.bookmarkRoute);
 
+// router.route('/exhibitions/:exhibitionId/bookmark/:bookmarkId')
+//   .delete(secureRoute, bookmarkController.deleteRoute);
+
 router.route('/users/:id').get(userController.showRoute);
 
 module.exports = router;

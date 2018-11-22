@@ -18,6 +18,17 @@ function exhibitionShowCtrl($scope, $http, $state) {
     });
   };
 
+  // $scope.removeBookmark = function(){
+  //   $http({
+  //     method: 'DELETE',
+  //     url: `/api/exhibitions/${$state.params.id}/bookmark`
+  //   }).then(result => {
+  //     $scope.exhibition = result.data;
+  //     //if your id (userId) is in the bookmarked array, you can unbookmark it
+  //
+  //   });
+  // };
+
   $scope.handleDelete = function(){
     console.log('You got this far, yay!');
     $http({

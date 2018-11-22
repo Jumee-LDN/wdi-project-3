@@ -12,6 +12,19 @@ function bookmarkRoute(req, res, next) {
     .catch(next);
 }
 
+// function deleteRoute(req, res, next) {
+//   Exhibition
+//     .findById(req.params.exhibitionId)
+//     .then(exhibition => {
+//     if(exhibition.bookmarked.includes(req.tokenUserId)){
+//       console.log('you have bookmarked this exhibition')
+//     };
+//
+// });
+// }
+
+
 module.exports = {
-  bookmarkRoute: bookmarkRoute
+  bookmarkRoute: bookmarkRoute,
+  // deleteRoute: deleteRoute
 };
