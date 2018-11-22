@@ -27,6 +27,16 @@
   }
 }
 
+#bookmark-icon {
+  text-align: center;
+  padding: 15px 0 30px;
+  button {
+    color: $xhibit-colour;
+  }
+  :hover {
+    border-color: $xhibit-colour;
+  }
+}
 .about {
   padding: 50px;
   height: 500px;
@@ -79,6 +89,13 @@
   background-size: 1px 10px;
 }
 
+#exhibition-list-section {
+  padding-top: 25px;
+  .card {
+    min-height: 580px;
+  }
+}
+
 .map {
   height: 450px;
   z-index: 0;
@@ -118,7 +135,7 @@
   }
 }
 .topMargin{
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .map-section {
@@ -218,7 +235,10 @@
   padding-bottom: 50px;
   .card {
     padding-bottom: 10px;
-    min-height: 550px;
+    min-height: 500px;
+    max-height: 500px;
+    overflow: scroll;
+    .content {margin: 0 15px;}
   }
   #featured-exhibitions {
     width: inherit;

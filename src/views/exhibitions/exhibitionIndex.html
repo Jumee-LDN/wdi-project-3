@@ -14,8 +14,7 @@
     </form>
   </div>
 
-
-  <div class="columns is-multiline is-centered">
+  <div class="columns is-multiline is-centered" id="exhibition-list-section">
     <div ng-repeat="exhibition in filteredExhibitions" class="column is-one-third">
       <a ui-sref="exhibitionShow({ id: exhibition._id})">
         <div class="card large">
@@ -37,6 +36,7 @@
                         <p class="subtitle is-6">Rating: {{ exhibition.rating }}</p>
                     </div>
                 </div>
+            
                 <div class="content">
                     {{exhibition.summary}}
                     <div class="background-icon"><span class="icon-facebook"></span></div>
