@@ -12,8 +12,18 @@ import userProfileCtrl from '../controllers/auth/userProfileCtrl';
 import exhibitionEditCtrl from '../controllers/exhibitions/exhibitionEditCtrl';
 // import mapCtrl from '../controllers/mapCtrl';
 
+// NOTE: This function runs before the state is loaded IF the state has
+// resolve: { secureRoute } on it.
+function secureRoute($auth, $state, Flash) {
+  if (!$auth.isAuthenticated()) {
+    Flash.create('info', 'Please log in');
+    $state.go('login');
+  }
+}
+
+
 //INDIA:
-function Router($stateProvider) {
+function Router($urlRouterProvider, $stateProvider) {
   $stateProvider
     .state('login', {
       templateUrl: './views/auth/login.html',
@@ -76,6 +86,10 @@ function Router($stateProvider) {
       url: '/users/:id',
       controller: userProfileCtrl
     });
+  // NOTE: Redirect to home whenever the url is invalid.
+  //       This also adds the #! for us if it's not there!
+  $urlRouterProvider.otherwise('/');
+
 }
 
 export default Router;

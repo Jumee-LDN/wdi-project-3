@@ -31,7 +31,7 @@
 
   <div class="has-text-centered column is-12-desktop">
     <button class="button" ng-if="isAuthenticated()" ng-click="handleDelete()">DELETE EXHIBITION</button>
-    <button class="button" ui-sref="exhibitionEdit({ id: exhibition._id })">Edit</button>
+    <button class="button" ng-if="isAuthenticated()" ui-sref="exhibitionEdit({ id: exhibition._id })">Edit</button>
   </div>
 
   <hr>
