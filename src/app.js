@@ -1,5 +1,8 @@
 import angular from 'angular';
 import '@uirouter/angularjs';
+// NOTE: Flash messages!
+import 'angular-flash-alert';
+import 'angular-flash-alert/dist/angular-flash.min.css';
 import 'bulma';
 import Router from './config/router';
 import 'satellizer';
@@ -14,7 +17,7 @@ import mainCtrl from './controllers/mainCtrl';
 //   $urlRouterProvider.otherwise('/');
 // }
 
-angular.module('exhibition', ['ui.router', 'satellizer'])
+angular.module('exhibition', ['ui.router', 'satellizer', 'ngFlash'])
   .config(Router)
   .controller('mainCtrl', mainCtrl)
   .config(function($authProvider){
