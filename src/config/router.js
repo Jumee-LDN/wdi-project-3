@@ -64,26 +64,22 @@ function Router($urlRouterProvider, $stateProvider) {
     .state('galleryNew', {
       templateUrl: './views/galleries/galleryNew.html',
       url: '/galleries/new',
-      controller: galleryNewCtrl,
-      resolve: { secureRoute }
+      controller: galleryNewCtrl
     })
     .state('galleryEdit', {
       templateUrl: './views/galleries/galleryEdit.html',
       url: '/galleries/:id/edit',
-      controller: galleryEditCtrl,
-      resolve: { secureRoute }
+      controller: galleryEditCtrl
     })
     .state('exhibitionEdit', {
       templateUrl: './views/exhibitions/exhibitionEdit.html',
       url: '/exhibitions/:id/edit',
-      controller: exhibitionEditCtrl,
-      resolve: { secureRoute }
+      controller: exhibitionEditCtrl
     })
     .state('exhibitionNew', {
       templateUrl: './views/exhibitions/exhibitionNew.html',
       url: '/galleries/:galleryId/new',
-      controller: exhibitionNewCtrl,
-      resolve: { secureRoute }
+      controller: exhibitionNewCtrl
     })
     .state('userProfile',{
       templateUrl: './views/auth/userProfile.html',
