@@ -60,14 +60,6 @@
               <div class="field is-narrow">
                 <div class="control">
                   <input class="input" ng-model="exhibition.rating" type="number" min="1" max="10" placeholder="5">
-
-                  <!-- <div class="select is-fullwidth">
-                    <select>
-                      <option>Business development</option>
-                      <option>Marketing</option>
-                      <option>Sales</option>
-                    </select>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -75,17 +67,28 @@
 
           <div class="field is-horizontal">
             <div class="field-label is-normal">
-              <label class="label">Review</label>
+              <label class="label">Review Summary</label>
             </div>
             <div class="field-body">
               <div class="field">
-                <div class="control has-icons-right">
-                  <!-- <input class="input" ng-model="exhibition.description" placeholder="Description"> -->
-                  <textarea ng-model="exhibition.description" class="textarea" placeholder="Write your exhibition review">
+                <div class="control">
+                  <textarea ng-model="exhibition.summary" rows="3" class="textarea" placeholder="Summarize your exhibition review">
                   </textarea>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-pencil-alt"></i>
-                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Full Review</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <!-- <input class="input" ng-model="exhibition.description" placeholder="Description"> -->
+                  <textarea ng-model="exhibition.description" rows="6" class="textarea" placeholder="Write your exhibition review">
+                  </textarea>
                 </div>
               </div>
             </div>
