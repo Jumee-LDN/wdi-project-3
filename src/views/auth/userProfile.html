@@ -5,13 +5,17 @@
     <div class="column is-12-desktop">
       <div class="userP columns is-multiline">
         <div class="column is-12-desktop">
-          <p>{{ user.username }}'s Profile</p>
+          <p> {{ user.username }}'s Profile </p>
         </div>
         <div class=" smaller column is-12-desktop">
           <p class="">view exhibitions that you've bookmarked</p>
           <hr>
         </div>
       </div>
+    </div>
+
+    <div ng-if="user.bookmarkedByMe.length === 0">
+      <p class="noBookmark"> No bookmarks yet...</p>
     </div>
 
     <div class="column is-4-desktop" ng-repeat="bookmark in user.bookmarkedByMe">
@@ -22,10 +26,11 @@
               <img src="{{ bookmark.image }}" alt="Image">
             </figure>
           </div>
-          <p>You & <strong>{{ bookmark.bookmarked.length - 1}}</strong> other(s)</p>
           <div class="card-content">
             <div class="media-content">
               <p id="exhibition" class="title is-4 no-padding">{{ bookmark.name }}</p>
+
+              <p class="list">You & <strong>{{ bookmark.bookmarked.length - 1}}</strong> other(s)</p>
             </div>
           </div>
         </div>

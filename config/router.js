@@ -54,10 +54,8 @@ router.route('/exhibitions/:exhibitionId/comments/:commentId')
   .delete(secureRoute, commentController.deleteRoute);
 
 router.route('/exhibitions/:exhibitionId/bookmark')
-  .post(secureRoute, bookmarkController.bookmarkRoute);
-
-// router.route('/exhibitions/:exhibitionId/bookmark')
-//   .delete(secureRoute, bookmarkController.deleteRoute);
+  .post(secureRoute, bookmarkController.bookmarkRoute)
+  .delete(secureRoute, bookmarkController.deleteRoute);
 
 router.route('/users/:id').get(userController.showRoute);
 
