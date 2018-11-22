@@ -1,11 +1,32 @@
 
 function exhibitionShowCtrl($scope, $http, $state) {
+  $scope.comment = {};
   $http({
     method: 'GET',
     url: `/api/exhibitions/${$state.params.id}`
   }).then(result => {
     $scope.exhibition = result.data;
   });
+
+  $scope.bookmarkExhibition = function(){
+    $http({
+      method: 'POST',
+      url: `/api/exhibitions/${$state.params.id}/bookmark`
+    }).then(result => {
+      $scope.exhibition = result.data;
+      console.log('this is $scope.exhibition', $scope.exhibition);
+    });
+  };
+
+  $scope.removeBookmark = function(){
+    $http({
+      method: 'DELETE',
+      url: `/api/exhibitions/${$state.params.id}/bookmark`
+    }).then(result => {
+      $scope.exhibition = result.data;
+
+    });
+  };
 
   $scope.handleDelete = function(){
     console.log('You got this far, yay!');
@@ -21,7 +42,16 @@ function exhibitionShowCtrl($scope, $http, $state) {
       method: 'POST',
       url: `/api/exhibitions/${$state.params.id}/comments`,
       data: $scope.comment
-    }).then(result => $scope.exhibition = result.data);
+    }).then(result => {
+      console.log('$scope.exhibition is: ', $scope.exhibition);
+      console.log('result.data is: ', result.data);
+
+      $scope.exhibition = result.data;
+
+      $scope.comment.text = null;
+
+    });
+
   };
 
   $scope.deleteComment = function(comment) {

@@ -1,0 +1,22 @@
+$xhibit-black: #252527;
+$xhibit-grey-light: #babac3;
+$xhibit-grey-dark: #5b5b61;
+$xhibit-colour: #7775da;
+$xhibit-colour-light: #c8c7ff;
+$xhibit-skyblue: rgba(147, 198, 247, 0.8);
+$xhibit-font: 'Merriweather', serif;
+
+$support-font: 'Roboto', sans-serif;
+
+
+%mid-title-set {
+  font-family: 'Merriweather', serif;
+  font-size: 3rem;
+  // font-weight: 700;
+}
+// NOTE: Don't need the underscore!!!
+@import 'partials/nav';
+@import 'partials/main';
+@import 'partials/main_welcome';
+@import 'partials/footer';
+@import 'partials/forms';

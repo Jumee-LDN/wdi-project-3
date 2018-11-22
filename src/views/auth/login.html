@@ -1,5 +1,39 @@
-<form ng-submit="handleLogin()">
-  <input name="email" ng-model="user.email" placeholder="email">
-  <input name="password" type="password" ng-model="user.password" placeholder="password">
-  <button class="button">Submit</button>
+<form ng-submit="handleLogin()" class="form-section">
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="column is-4 is-offset-4">
+          <h2 class="title has-text-grey" id="auth-titles">Login</h2>
+          <p class="subtitle has-text-grey">Please login to proceed.</p>
+          <div class="box">
+            <figure class="avatar">
+              <img src="https://bit.ly/2DQ2CNo">
+            </figure>
+            <form>
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input ng-model="user.email" class="input is-large" type="email" placeholder="Your Email" autofocus="">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+
+              </div>
+
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input ng-model="user.password" class="input is-large" type="password" placeholder="Your Password">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+              <button class="button is-block is-info is-large is-fullwidth">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </form>

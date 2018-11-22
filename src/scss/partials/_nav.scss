@@ -1,0 +1,64 @@
+#navbar{
+  background-color: inherit;
+  font-family: $support-font;
+  color: $xhibit-grey-light;
+  padding: 0.5rem 2rem;
+  ul {
+    display: -webkit-inline-box;
+  }
+  .user-nav {
+    border-bottom: 1px solid $xhibit-grey-light;
+    .nav-username {
+      font-weight: 700;
+      padding-left: 0.5rem;
+    }
+    :hover {
+      color: $xhibit-colour;
+    }
+    a{
+      padding-top: 1em;
+    }
+  }
+
+  a{
+    color: $xhibit-grey-light;
+    background-color: inherit;
+  }
+  #nav-tt {
+    font-family: $xhibit-font;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  .navbar-dropdown {
+    background-color: inherit;
+    border-top: 1px solid $xhibit-grey-light;
+    box-shadow: none;
+    :hover {
+      color: $xhibit-colour;
+    }
+  }
+}
+
+#navbar-2{
+  background-color: white;
+  font-family: $support-font;
+  padding: 0.5rem 2rem;
+
+  a{
+    color: $xhibit-grey-dark;
+    background-color: inherit;
+  }
+
+  #nav-tt {
+    font-family: $xhibit-font;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  :hover {
+    color: $xhibit-colour;
+  }
+}
+
+#navbar-2:hover {
+  box-shadow: 0px 0px 10px #babac3;
+}

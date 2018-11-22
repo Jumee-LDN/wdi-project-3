@@ -20,7 +20,7 @@ function loginRoute(req, res, next) {
         });
       } else {
         res.status(401).json({
-          message: 'Dont think so!!!'
+          message: 'Please try again.'
         });
       }
     })

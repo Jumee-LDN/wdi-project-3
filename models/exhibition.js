@@ -5,6 +5,8 @@ const exhibitionSchema = mongoose.Schema({
   dates: String,
   rating: Number,
   description: String,
+  summary: String,
+  bookmarked: [ { type: mongoose.Schema.ObjectId, ref: 'User' }],
   image: String,
   gallery: {
     type: mongoose.Schema.ObjectId,
@@ -19,6 +21,10 @@ const exhibitionSchema = mongoose.Schema({
       }
     }
   ]
+});
+
+exhibitionSchema.set('toJSON', {
+  virtuals: true
 });
 
 const exhibitionModel = mongoose.model('Exhibition', exhibitionSchema);

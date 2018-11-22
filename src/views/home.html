@@ -1,3 +1,123 @@
-<h1>This is Home Page</h1>
 
-<p>this should work now.</p>
+<div class="welcome-section">
+  <div class="title">
+    <p>Welcome to</p>
+    <p class="app-name">xhibit</p>
+    <div class="welcome-message">
+      <p>See our guide to the best free,
+      <br>new and critically-acclaimed exhibitions <br>in the capital</p>
+    </div>
+  </div>
+</div>
+<main class="homeStyle">
+  <section class="main">
+
+    <div class="about">
+      <div class="column has-text-centered">
+        <strong class="xhibitTitle">About xhibit</strong>
+        <hr>
+      </div>
+      <div class="aboutBottom column has-text-centered">
+        <p>Founded in 2015 by Indimee, xhibit is one of the world’s leading
+          international contemporary review sites, dedicated to expanding
+          contemporary art’s audience and reach. We believe that art plays
+          a vital role in inspiring a richer, more profound understanding of
+          human experience, culture and society today.
+          Aimed at both a specialist and a general audience,
+          xhibit features a mixture of criticism, reviews, reportage and
+          specially commissioned artworks, and offers the most established,
+          in-depth and intimate portrait of international contemporary art in
+          all its shapes and forms. </p>
+      </div>
+
+    </div>
+
+    <section class="section" id="featured-exhibitions-section">
+      <div class="container has-text-centered" id="featured-exhibitions">
+        <h2 class="title">Featured exhibitions</h2>
+        <hr>
+        <div class="columns is-multiline is-centered" style="padding: 2rem">
+          <div class="column is-4" ng-repeat="exhibition in allExhibitions | filter : featuredExhibitions | limitTo : 3">
+            <div>
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="{{ exhibition.image }}" alt="This is{{exhibition.name}}">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <a ui-sref="exhibitionShow({ id: exhibition._id})">
+                        <p class="title is-4 has-text-centered"> <span class="bold">{{exhibition.name}}</span> </p>
+                        <p class="subtitle is-6 has-text-centered">Until {{exhibition.dates}}</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="content">
+                  <p>{{ exhibition.summary}}</p>
+                  <a>@gallery</a>.
+                  <a href="#">#artist</a>
+                  <a href="#">#city</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="map-search">
+      <div class=" title has-text-centered" id="map-tt-area"> <h2 class="title">The Xhibit Map</h2></div>
+      <div class="field has-addons is-grouped is-grouped-centered" id="input-area">
+        <div class="control">
+          <input class="input" ng-model="searchTerm" ng-change="findPlaces()" placeholder="Search for locations">
+        </div>
+        <!-- <div class="control">
+          <a class="button">
+            🔍
+          </a>
+        </div> -->
+        <div class="button" ng-click="findUser()">
+          <p>See where you are now 🐥</p>
+        </div>
+
+      </div>
+
+      <div class="result-container">
+        <div class="search-results">
+          <div class="result" ng-repeat="place in searchResults" ng-click="goTo(place)">
+            <p class="placeName">{{ place.display_name }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="map-element" class="map"></div>
+
+      <section class="section search-list">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <p class="titles">EXHIBITIONS</p>
+              <div ng-repeat="exhibition in allExhibitions">
+                <a class="search-list" ng-click="panMapE(exhibition)"><p class="hovers">
+
+                  {{ exhibition.name }}</p></a>
+              </div>
+            </div>
+            <div class="column">
+              <p class="titles">GALLERIES</p>
+              <div ng-repeat="gallery in galleries">
+                <a class="search-list" ng-click="panMap(gallery)"><p class="hovers">
+                  {{ gallery.name }}</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+  </section>
+</main>

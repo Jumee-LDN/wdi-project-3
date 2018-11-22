@@ -1,0 +1,251 @@
+.main{
+  padding: 80px 200px 50px 200px;
+}
+
+.page, #galleryIndex, #exhibitionIndex, #userProfile {
+  padding-bottom: 60px;
+}
+
+
+#auth-titles {
+  font-family: $xhibit-font;
+  padding-bottom: 1rem;
+}
+
+#userProfile{
+  min-height: 600px;
+  padding-top: 85px;
+  .noBookmark{
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 60px;
+    color: grey;
+  }
+  .list{
+    padding: 5px;
+  }
+}
+
+#bookmark-icon {
+  text-align: center;
+  padding: 15px 0 30px;
+  button {
+    color: $xhibit-colour;
+  }
+  :hover {
+    border-color: $xhibit-colour;
+  }
+}
+.about {
+  padding: 50px;
+  height: 500px;
+  .xhibitTitle {
+    font-size: 2rem;
+  }
+}
+
+#exhibitionIndex{
+  padding-top: 80px;
+  font-family: 'Merriweather', serif;
+  .xhibit{
+    font-size: 30px;
+    padding-bottom: 30px;
+    padding-top: 40px;
+  }
+}
+
+.show{
+  font-family: 'Merriweather', serif;
+  padding-top: 150px;
+  padding-bottom: 80px;
+  .left{
+    padding-left: 20px;
+    margin-right: 60px;
+  }
+}
+.bottom, .gallery, .homeStyle {
+  padding-bottom: 100px;
+  font-family: 'Merriweather', serif;
+}
+
+.gallery, .topMargin{
+  padding-top: 60px;
+}
+
+.black{
+  color: grey !important;
+  :hover{
+    color: black;
+  }
+}
+.span{
+  background-color: rgba(147, 198, 247, 0.5) !important;
+}
+#exhibition, #blue {
+  background-image: linear-gradient(to right, rgba(147, 198, 247, 0.5) 0%, rgba(147, 198, 247, 0.5) 100%);
+  background-position: 0 0.84em;
+  background-repeat: repeat-x;
+  background-size: 1px 10px;
+}
+
+#exhibition-list-section {
+  padding-top: 25px;
+  .card {
+    min-height: 580px;
+  }
+}
+
+.map {
+  height: 450px;
+  z-index: 0;
+}
+
+.map-search {
+  padding: 50px;
+  height: 100%;
+  background-color: $xhibit-black;
+  #map-tt-area{
+    h2{
+      color: white;
+      padding: 30px;
+    }
+  }
+  #input-area {
+    input {
+      width: 450px;
+    }
+    padding: 15px;
+
+  }
+}
+#top{
+  .anchor{
+    color: black !important;
+    :hover {
+        font-weight: 600;
+    }
+  }
+}
+#row{
+  display: flex;
+  flex-wrap: wrap;
+  figure {
+    margin: -65px;
+  }
+}
+.topMargin{
+  margin-top: 10px;
+}
+
+.map-section {
+  height: 300px;
+}
+
+.circle, .userP{
+  font-size: 40px;
+  font-family: $xhibit-font;
+  .smaller{
+    font-size: 25px;
+  }
+
+}
+.result-container {
+  position: relative;
+}
+
+
+.search-results {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  .result {
+    position: static;
+    background-color: white;
+    height: 30px;
+    border-bottom: grey solid 1px;
+  }
+  :hover {
+    background-color: $xhibit-skyblue;
+    color: $xhibit-colour;
+  }
+}
+
+.search-list{
+  color: $xhibit-grey-light;
+  padding: 50px 0 30px 0;
+  .column {
+    .titles, .xhibitTitle {
+      font-size: 20px;
+      color: white;
+      padding-bottom: 1rem;
+    }
+    border-left: 0.5px solid $xhibit-grey-dark;
+    margin-left: 12px;
+  }
+}
+
+.hovers:hover{
+  color: $xhibit-colour;
+}
+
+#zoom {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  margin: 2%;
+  overflow: hidden;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+
+#zoom:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+
+}
+
+#grey{
+  margin-top: 125px;
+  margin-bottom: 40px;
+  font-family:'Merriweather', serif;;
+  .grey{
+    padding-bottom: 30px;
+    font-size: 20px;
+  }
+}
+
+.add-gallery-section, #gallery-list-title {
+  text-align: center;
+}
+
+
+#featured-exhibitions-section {
+  padding: 0;
+  padding-bottom: 50px;
+  .card {
+    padding-bottom: 10px;
+    min-height: 500px;
+    max-height: 500px;
+    overflow: scroll;
+    .content {margin: 0 15px;}
+  }
+  #featured-exhibitions {
+    width: inherit;
+  }
+}
+
+#exhibition-card {
+  padding-bottom: 10px;
+  min-height: 400px;
+}

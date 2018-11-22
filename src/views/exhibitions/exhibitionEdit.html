@@ -4,19 +4,28 @@
       <div class="container">
 
         <div class="form-title-area">
-          <h2 class="title">Create New Gallery</h2>
+          <h2 class="title">Edit Your Exhibition Review</h2>
         </div>
 
         <div class="column is-half is-offset-one-quarter is-centered" id="from-box">
 
           <div class="field is-horizontal">
             <div class="field-label is-normal">
-              <label class="label">Gallery Name</label>
+              <label class="label">Exhibition Title</label>
             </div>
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded">
-                  <input class="input" ng-model="gallery.name" placeholder="Gallery Name">
+                  <input class="input" ng-model="exhibition.name" placeholder="Exhibition Title">
+                </p>
+              </div>
+
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" ng-model="exhibition.dates" placeholder="Untill Friday Jan 2019">
+                  <span class="icon is-small is-left">
+                    <i class="far fa-calendar-alt"></i>
+                  </span>
                 </p>
               </div>
             </div>
@@ -35,7 +44,7 @@
                     </a>
                   </p>
                   <p class="control is-expanded">
-                    <input class="input" ng-model="gallery.image" placeholder="https://gallery.com/image.jpg">
+                    <input class="input" ng-model="exhibition.image" placeholder="https://van-gogh.com/image.jpg">
                   </p>
                 </div>
                 <p class="help">Please enter full image url</p>
@@ -45,64 +54,41 @@
 
           <div class="field is-horizontal">
             <div class="field-label is-normal">
-              <label class="label">Gallery Loaction</label>
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <p class="control is-expanded">
-                  <input class="input" ng-model="gallery.latlgn.lat" placeholder="latitude" type="number">
-                </p>
-              </div>
-
-              <div class="field">
-                <p class="control is-expanded">
-                  <input class="input" ng-model="gallery.latlgn.lgn" placeholder="longitude" type="number">
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="field is-horizontal">
-            <div class="field-label is-normal">
-              <label class="label">Location Name</label>
-            </div>
-            <div class="field-body">
-              <div class="field is-expanded">
-                <div class="field has-addons">
-                  <p class="control is-expanded">
-                    <input class="input" ng-model="gallery.locationName" placeholder="Midtown">
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="field is-horizontal">
-            <div class="field-label is-normal">
               <label class="label">Rate</label>
             </div>
             <div class="field-body">
               <div class="field is-narrow">
                 <div class="control">
-                  <input class="input" ng-model="gallery.rating" type="number" min="1" max="10" placeholder="5">
+                  <input class="input" ng-model="exhibition.rating" type="number" min="1" max="10" placeholder="5">
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
 
           <div class="field is-horizontal">
             <div class="field-label is-normal">
-              <label class="label">Description</label>
+              <label class="label">Review Summary</label>
             </div>
             <div class="field-body">
               <div class="field">
-                <div class="control has-icons-right">
-                  <!-- <input class="input" ng-model="exhibition.description" placeholder="Description"> -->
-                  <textarea ng-model="gallery.description" class="textarea" placeholder="Description about gallery">
+                <div class="control">
+                  <textarea ng-model="exhibition.summary" rows="3" class="textarea" placeholder="Summarize your exhibition review">
                   </textarea>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-pencil-alt"></i>
-                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Full Review</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <!-- <input class="input" ng-model="exhibition.description" placeholder="Description"> -->
+                  <textarea ng-model="exhibition.description" rows="6" class="textarea" placeholder="Write your exhibition review">
+                  </textarea>
                 </div>
               </div>
             </div>
@@ -116,14 +102,12 @@
               <div class="field">
                 <div class="control">
                   <button class="button" id="submit-button">
-                    Create Gallery
+                    Submit Review
                   </button>
                 </div>
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </div>

@@ -1,16 +1,42 @@
-<h2>A List of Galleries</h2>
 
-<div ng-repeat="gallery in allGalleries" class="column is-4">
-  <a ui-sref="galleryShow({ id: gallery._id })">
-    <div class="card">
-      <div class="card-header">
-        {{ gallery.name }}
+<div id="galleryIndex" class="columns is-12-desktop is-mobile">
+
+  <div id="top" class="column is-multiline is-4-desktop" >
+    <div id="grey">
+      <div class="grey" id="gallery-list-title">
+        <strong>Gallery List</strong>
       </div>
-      <div class="card-image">
-        <figure class="image">
-          <img ng-src="{{ gallery.image }}" alt="{{ gallery.name }}">
-        </figure>
+      <hr>
+      <div class="add-gallery-section">
+        <a ui-sref="galleryNew">Add Gallery</a>
+      </div>
+      <hr>
+      <div ng-repeat="gallery in allGalleries" class="column is-4">
+        <a ui-sref="galleryShow({ id: gallery._id })">
+            <div class="anchor">
+              <p>{{ gallery.name }}</p>
+            </div>
+        </a>
       </div>
     </div>
-  </a>
-</div>
+  </div>
+
+  <div class="columns is-multiline is-8-desktop topMargin">
+
+    <div id="row" ng-repeat="gallery in allGalleries" class="column is-6-desktop">
+            <!-- <div id="zoom" class="column is-11">
+              <img ng-src="{{ gallery.image }}" alt="{{ gallery.name }}">
+              <div class="zoom-overlay top"></div>
+            </div> -->
+          <a ui-sref="galleryShow({ id: gallery._id })"
+            <div id="zoom" class="card large">
+                <div class="card-image">
+                    <figure class="image">
+                        <img class="image" id="cover" src="{{ gallery.image }}" alt="Image">
+                        <div class="zoom-overlay top"></div>
+                    </figure>
+                </div>
+              </a>
+        </div>
+    </div>
+  </div>

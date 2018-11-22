@@ -11,16 +11,31 @@ const userIds = [
   '5be9bd11c7f4b190431791a3'
 ];
 
+const userData = {
+  _id: userIds[0],
+  username: 'Jumee',
+  email: 'j@j',
+  password: 'pass'
+};
+
 const galleryIds = [
   '5be9bd11c7f4b190431791a6',
-  '5be9bd11c7f4b190431791a7'
+  '5be9bd11c7f4b190431791a7',
+  '5be9bd11c7f4b190431791a8',
+  '5be9bd11c7f4b190431791a9',
+  '5be9bd11c7f4b190431791a5',
+  '5be9bd11c7f4b190431791a4'
 ];
 
-const galleryData = {
+
+const galleryData =  {
   _id: galleryIds[1],
   name: 'Somerset House',
   image: 'https://bit.ly/2ONZkeE',
-  latlgn: { lat: 51.5, lgn: -0.11},
+  city: 'London',
+  country: 'UK',
+  description: 'Offering a diverse and dynamic public programme of contemporary arts and culture, we are also a home to a large community of creative businesses, artists and makers, including Somerset House Studios. One of the city’s most spectacular and well-loved spaces, we are a place where art and culture is imagined, made and experienced by our 3 million visitors every year.',
+  latlgn: { lat: 51.51135, lgn: -0.11903},
   locationName: 'Temple'
 };
 
@@ -43,11 +58,9 @@ describe('Galleries CREATE', () => {
   });
 
   it('should return a 401 response without a token', done => {
-    // NOTE: This requires a change to the app! I've updated
-    // secureRoute to pass this test...
     api.post('/api/galleries')
       .end((err, res) => {
-        expect(res.status).to.eq(401);
+        expect(res.status).to.equal(401);
         done();
       });
   });
@@ -86,5 +99,5 @@ describe('Galleries CREATE', () => {
         done();
       });
   });
-  
+
 });

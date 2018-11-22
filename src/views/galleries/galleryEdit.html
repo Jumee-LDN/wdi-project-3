@@ -4,7 +4,7 @@
       <div class="container">
 
         <div class="form-title-area">
-          <h2 class="title">Create New Gallery</h2>
+          <h2 class="title">Edit Gallery</h2>
         </div>
 
         <div class="column is-half is-offset-one-quarter is-centered" id="from-box">
@@ -50,13 +50,13 @@
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded">
-                  <input class="input" ng-model="gallery.latlgn.lat" placeholder="latitude" type="number">
+                  <input class="input" step="-1.12346789" ng-model="gallery.latlgn.lat" placeholder="latitude" type="number">
                 </p>
               </div>
 
               <div class="field">
                 <p class="control is-expanded">
-                  <input class="input" ng-model="gallery.latlgn.lgn" placeholder="longitude" type="number">
+                  <input class="input" step="-1.12346789" ng-model="gallery.latlgn.lgn" placeholder="longitude" type="number">
                 </p>
               </div>
             </div>
@@ -96,13 +96,10 @@
             </div>
             <div class="field-body">
               <div class="field">
-                <div class="control has-icons-right">
+                <div class="control">
                   <!-- <input class="input" ng-model="exhibition.description" placeholder="Description"> -->
-                  <textarea ng-model="gallery.description" class="textarea" placeholder="Description about gallery">
+                  <textarea ng-model="gallery.description" rows="10" class="textarea" placeholder="Description about gallery">
                   </textarea>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-pencil-alt"></i>
-                  </span>
                 </div>
               </div>
             </div>
@@ -116,13 +113,12 @@
               <div class="field">
                 <div class="control">
                   <button class="button" id="submit-button">
-                    Create Gallery
+                    Edit Gallery
                   </button>
                 </div>
               </div>
             </div>
           </div>
-
 
         </div>
       </div>

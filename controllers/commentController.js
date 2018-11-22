@@ -6,12 +6,14 @@ function createRoute(req, res, next){
   Exhibition
     .findById(req.params.exhibitionId)
     .then(exhibition => {
+      console.log('this is exhibition', exhibition)
       req.body.commentAuthor = req.tokenUserId;
       exhibition.comments.push(req.body);
       console.log('creating a comment', req.body);
       return exhibition.save();
     })
-    .then(exhibition => Exhibition.populate(exhibition, 'comments.commentAuthor'))
+    .then(exhibition => Exhibition.populate(exhibition,'comments.commentAuthor'))
+    .then(exhibition => Exhibition.populate(exhibition, 'gallery'))
     .then(exhibition => res.json(exhibition))
     .catch(next);
 }
@@ -24,7 +26,7 @@ function deleteRoute(req, res, next){
       comment.remove();
       return exhibition.save();
     })
-    .then(exhibition => Exhibition.populate(exhibition, 'comments.commentAuthor'))
+    .then(exhibition => Exhibition.populate(exhibition, 'comments.commentAuthor gallery'))
     .then(exhibition => res.json(exhibition))
     .catch(next);
 }

@@ -3,11 +3,13 @@ const galleryController = require('../controllers/galleryController');
 const exhibitionController = require('../controllers/exhibitionController');
 const commentController = require('../controllers/commentController');
 const authController = require('../controllers/authController');
+const bookmarkController = require('../controllers/bookmarkController');
+const userController = require('../controllers/userController');
 const jwt = require('jsonwebtoken');
 
 function secureRoute(req, res, next) {
   if (!req.headers.authorization)
-    res.status(401).json({ message: 'unauthorised'});
+    return res.status(401).json({ message: 'unauthorised'});
   const token = req.headers.authorization.replace('Bearer ', '');
   jwt.verify(token, 'indimee', function(err) {
     if(err){
@@ -33,7 +35,7 @@ router.route('/exhibitions')
   .get(exhibitionController.indexRoute);
 
 router.route('/galleries/:galleryId')
-  .post(secureRoute, exhibitionController.createRoute);
+  .post(exhibitionController.createRoute);
 
 router.route('/galleries/:id')
   .get(galleryController.show)
@@ -46,9 +48,15 @@ router.route('/exhibitions/:id')
   .delete(secureRoute, exhibitionController.deleteRoute);
 
 router.route('/exhibitions/:exhibitionId/comments')
-  .post(commentController.createRoute);
+  .post(secureRoute, commentController.createRoute);
 
 router.route('/exhibitions/:exhibitionId/comments/:commentId')
-  .delete(commentController.deleteRoute);
+  .delete(secureRoute, commentController.deleteRoute);
+
+router.route('/exhibitions/:exhibitionId/bookmark')
+  .post(secureRoute, bookmarkController.bookmarkRoute)
+  .delete(secureRoute, bookmarkController.deleteRoute);
+
+router.route('/users/:id').get(userController.showRoute);
 
 module.exports = router;

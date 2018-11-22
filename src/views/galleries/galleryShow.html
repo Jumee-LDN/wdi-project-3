@@ -1,13 +1,45 @@
-<h2>{{gallery.name}}</h2>
-<p>{{ gallery.locationName}}</p>
-<img src="{{ gallery.image }}" alt="{{ gallery.name }}">
+<section class="gallery">
+  <div class="columns is-multiline is-12-desktop">
+    <div class="column is-multiline is-6-desktop">
+      <br>
+      <div class="column is-12-desktop"><h2 class="title is-2 has-text-centered">{{gallery.name}}</h2></div>
+      <div class="column is-12-desktop">  <p class="title is-3 has-text-centered"> <i class="fas fa-map-marker-alt "> </i>  {{ gallery.locationName}}</p>
+      </div>
+      <div class="column is-12-desktop has-text-centered">  <button class="button" ng-if="isAuthenticated()" ui-sref="exhibitionNew({ galleryId: gallery._id })">ADD EXHIBITION ✚</button> </div>
 
-<div ng-repeat="exhibition in gallery.exhibitionList" class="card column is-3-desktop" style="margin: 10px;">
-  <div>
-    <p>{{exhibition.name}}</p>
+      <div class="column is-12-desktop has-text-centered">
+        <p>{{ gallery.description }}</p>
+      </div>
+    </div>
+
+    <div class="column is-6-desktop">
+      <br>
+      <img class="circle is-centered" src="{{ gallery.image }}" alt="{{ gallery.name }}">
+    </div>
   </div>
+
+  <div class="buttons is-right" ng-if="isAuthenticated()">
+    <button class="button" ui-sref="galleryEdit({ id: gallery._id })">Edit</button>
+    <button class="button" ng-click="handleDelete()">DELETE</button>
   </div>
-<div class="buttons" ng-if="isAuthenticated() && gallery.createdBy._id === userId">
-  <button class="button is-info" ui-sref="galleryEdit({ id: gallery._id })">Edit</button>
-  <button class="button is-danger" ng-click="handleDelete()">DELETE</button>
-</div>
+  <hr>
+
+  <div class="columns is-multiline is-8-desktop topMargin">
+    <div ng-repeat="exhibition in gallery.exhibitionList"  class="column is-4-desktop">
+      <a ui-sref="exhibitionShow({ id: exhibition._id})">
+        <div class="card large" id="exhibition-card">
+          <div class="card-image is-96x96">
+            <figure>
+              <img src="{{ exhibition.image }}" alt="Image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media-content">
+              <p id="exhibition" class="title is-4 no-padding">{{ exhibition.name }}</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

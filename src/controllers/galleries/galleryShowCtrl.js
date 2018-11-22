@@ -10,7 +10,7 @@ function showCtrl($state, $scope, $http) {
     $http({
       method: 'DELETE',
       url: `/api/galleries/${$scope.gallery._id}`
-    }).then(() => $state.go('galleriesIndex'));
+    }).then(() => $state.go('galleryIndex'));
   };
 }
 
