@@ -2,7 +2,7 @@
   padding: 80px 200px 50px 200px;
 }
 
-.page, #galleryIndex, #exhibitionIndex {
+.page, #galleryIndex, #exhibitionIndex, #userProfile {
   padding-bottom: 60px;
 }
 
@@ -103,6 +103,9 @@
 .circle, .userP{
   font-size: 40px;
   font-family: $xhibit-font;
+  .smaller{
+    font-size: 25px;
+  }
 
 }
 .result-container {
