@@ -6,6 +6,12 @@
   padding-bottom: 60px;
 }
 
+
+#auth-titles {
+  font-family: $xhibit-font;
+  padding-bottom: 1rem;
+}
+
 #userProfile{
   min-height: 600px;
   padding-top: 85px;
@@ -108,7 +114,7 @@
   display: flex;
   flex-wrap: wrap;
   figure {
-    margin: -30px;
+    margin: -65px;
   }
 }
 .topMargin{
@@ -189,7 +195,7 @@
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  
+
 }
 
 #grey{
@@ -210,7 +216,16 @@
 #featured-exhibitions-section {
   padding: 0;
   padding-bottom: 50px;
+  .card {
+    padding-bottom: 10px;
+    min-height: 550px;
+  }
   #featured-exhibitions {
     width: inherit;
   }
+}
+
+#exhibition-card {
+  padding-bottom: 10px;
+  min-height: 400px;
 }
