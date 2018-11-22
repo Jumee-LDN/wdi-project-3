@@ -122,6 +122,10 @@ const exhibitionData = [
       }, {
         text: 'Such a boring exhibition.',
         commentAuthor: userIds[2]
+      },
+      {
+        text: '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.',
+        commentAuthor: userIds[2]
       }
     ]
   },
@@ -136,6 +140,22 @@ const exhibitionData = [
     comments: [
       {
         text: 'I\'ve seen this before. Curating isn\'t great',
+        commentAuthor: userIds[2]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.',
+        commentAuthor: userIds[2]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.',
+        commentAuthor: userIds[2]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae.',
+        commentAuthor: userIds[2]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.',
         commentAuthor: userIds[2]
       }
     ]
@@ -156,7 +176,15 @@ const exhibitionData = [
       }, {
         text: 'I don\'t like it',
         commentAuthor: userIds[2]
-      }
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.',
+        commentAuthor: userIds[2]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.',
+        commentAuthor: userIds[2]
+      },
     ]
   },
   {
@@ -172,6 +200,18 @@ const exhibitionData = [
       {
         text: 'This is something new.',
         commentAuthor: userIds[0]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.',
+        commentAuthor: userIds[2]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.',
+        commentAuthor: userIds[2]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae.',
+        commentAuthor: userIds[2]
       }
     ]
   },
@@ -188,6 +228,18 @@ const exhibitionData = [
       {
         text: 'This is awesome',
         commentAuthor: userIds[0]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. ',
+        commentAuthor: userIds[2]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.',
+        commentAuthor: userIds[2]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.',
+        commentAuthor: userIds[2]
       }
     ]
   },
@@ -204,6 +256,18 @@ const exhibitionData = [
       {
         text: 'Abu Hamdan’s show has a point and a conscience.',
         commentAuthor: userIds[1]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae.',
+        commentAuthor: userIds[2]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi aliquam ex quae maiores voluptate.',
+        commentAuthor: userIds[2]
+      },
+      {
+        text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eveniet, dolorem placeat repellat illo ducimus repudiandae. Facilis expedita ut quaerat? Maxime qui unde possimus. Quasi aliquam ex quae maiores voluptate.',
+        commentAuthor: userIds[2]
       }
     ]
   }
