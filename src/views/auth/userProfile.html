@@ -14,6 +14,10 @@
       </div>
     </div>
 
+    <div ng-if="user.bookmarkedByMe.length === 0">
+      <p class="noBookmark"> No bookmarks yet...</p>
+    </div>
+
     <div class="column is-4-desktop" ng-repeat="bookmark in user.bookmarkedByMe">
       <a ui-sref="exhibitionShow({ id: bookmark._id})">
         <div class="card large">
