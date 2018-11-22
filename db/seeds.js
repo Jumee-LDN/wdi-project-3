@@ -109,7 +109,7 @@ const exhibitionData = [
   {
   //Review by Jumee
     name: 'Alex Katz: Coca-Cola Girls',
-    dates: 'Until Friday December 21 2018',
+    dates: 'Friday December 21 2018',
     rating: 4,
     description: 'Everything was good once. Not like today. Back in the 1950s, America was booming. Money was flowing, business was good, the war had been won and the sun was always shining. It was the halcyon days of modern capitalism.',
     summary: 'Everything was good once. Not like today. Back in the 1950s, America was booming. Money was flowing, business was good, the war had been won and the sun was always shining.',
@@ -127,7 +127,7 @@ const exhibitionData = [
   },
   {
     name: 'Ribera: Art of Violence',
-    dates: 'Until Sunday Jan 27 2019',
+    dates: 'Sunday Jan 27 2019',
     rating: 8,
     description: 'Flayed skin and dislocated shoulders are two recurring themes of Jusepe de Ribera’s art. The first, normally inflicted on Christian saints as part of their martyrdoms, and the second, the result of a foul seventeenth-century torture device known as the ‘strappado’.',
     summary: 'Flayed skin and dislocated shoulders are two recurring themes of Jusepe de Ribera’s art.Flayed skin and dislocated shoulders are two recurring themes of Jusepe de Ribera’s art.',
@@ -143,7 +143,7 @@ const exhibitionData = [
   {
   //Review by India
     name: 'Athi-Patra Ruga: Of Gods, Rainbows and Omissions',
-    dates: 'Until Sunday January 6 2019',
+    dates: 'Sunday January 6 2019',
     rating: 9,
     description: 'Athi-Patra Ruga’s exhibition at Somerset House certainly justifies the reference in its title to rainbows. Each of the gallery’s Terrace Rooms is a kaleidoscopic mass of saturated colour. Ruby, fuchsia, turquoise, periwinkle, sunshine-happy yellow, this show of tapestries is the perfect inoculation against the growing greyness of London’s November sky.',
     summary: 'Athi-Patra Ruga’s exhibition at Somerset House certainly justifies the reference in its title to rainbows.',
@@ -162,7 +162,7 @@ const exhibitionData = [
   {
   //Review by India
     name: 'Elmgreen & Dragset',
-    dates: 'Until Sunday January 13 2019',
+    dates: 'Sunday January 13 2019',
     rating: 2,
     description: 'The Whitechapel Gallery is being turned into a luxury hotel. Sorry about that. Its galleries will be turned into suites for the moneyed hipster elite to huff designer drugs in, and its pool will become an opulent spa.',
     summary: 'The Whitechapel Gallery is being turned into a luxury hotel. Sorry about that. The Whitechapel Gallery is being turned into a luxury hotel. Sorry about that. ',
@@ -178,7 +178,7 @@ const exhibitionData = [
   {
   //Review by India
     name: 'New Work: Etel Adnan',
-    dates: 'September 1st 2018 – January 6th 2019',
+    dates: 'January 6th 2019',
     rating: 7,
     description: 'Born in Beirut, Lebanon, in 1925, visual artist, poet, and essayist Etel Adnan writes what must be communicated through language, and paints what cannot. While her earliest paintings favored pure abstraction, she is perhaps best known for her landscape works inspired by her long obsession with Mount Tamalpais. Adnan’s recent works once again return to abstraction, most specifically, color and its possibilities. A student of philosophy, Adnan came to Berkeley in 1955. As an active participant in Ann O’Hanlon’s Perception Workshops in Mill Valley in the 1960s, she developed her practice in dialogue with poets, experimental musicians, playwrights, and SFMOMA, at its original location in the War Memorial Veteran’s Building. Though she now resides in Paris, the Bay Area remained her home for more than fifty years, and was long the impetus behind her work. New Work: Etel Adnan presents new paintings and tapestries in SFMOMA’s first presentation of the artist’s work.',
     summary: 'Born in Beirut, Lebanon, in 1925, visual artist, poet, and essayist Etel Adnan writes what must be communicated through language, and paints what cannot.',
@@ -194,7 +194,7 @@ const exhibitionData = [
   {
   //Review by India
     name: 'Lawrence Abu Hamdan',
-    dates: 'Until Sunday December 9 2018',
+    dates: 'Sunday December 9 2018',
     rating: 7,
     description: 'There’s crap everywhere in this show. There’s a bin full of plastic tubing and a cricket bat, a stepladder, metal shelves covered with popcorn, teacups and trainers, watermelons on the floor, big bottles of fizzy drink, a paddling pool.',
     summary: 'There’s crap everywhere in this show. There’s a bin full of plastic tubing and a cricket bat, a stepladder, metal shelves covered with popcorn. There’s crap everywhere in this show. ',

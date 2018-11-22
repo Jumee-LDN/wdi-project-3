@@ -6,5 +6,18 @@ footer {
   left: 0;
   padding: 1rem;
   text-align: center;
-  color: $xhibit-grey-light;
+  color: $xhibit-grey-dark;
+  a {
+    color: $xhibit-grey-dark;
+  }
+  a:hover {
+    color: $xhibit-colour;
+  }
+  .footer-tt {
+    bottom: 0;
+    color: $xhibit-grey-light;
+    font-family: $xhibit-font;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
 }

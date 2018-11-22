@@ -1,6 +1,19 @@
-.page, #galleryIndex, #exhibitionIndex, .aboutBottom {
+.main{
+  padding: 80px 200px 50px 200px;
+}
+
+.page, #galleryIndex, #exhibitionIndex {
   padding-bottom: 60px;
 }
+
+.about {
+  padding: 50px;
+  height: 500px;
+  .xhibitTitle {
+    font-size: 2rem;
+  }
+}
+
 #exhibitionIndex{
   padding-top: 40px;
   font-family: 'Merriweather', serif;
@@ -48,16 +61,16 @@
   height: 450px;
   z-index: 0;
 }
-.main{
-  padding: 100px 200px 50px 200px;
-}
 
 .map-search {
   padding: 50px;
   height: 100%;
   background-color: $xhibit-black;
-  h2{
-    color: white;
+  #map-tt-area{
+    h2{
+      color: white;
+      padding: 30px;
+    }
   }
   #input-area {
     input {
@@ -107,14 +120,21 @@
   }
   :hover {
     background-color: $xhibit-skyblue;
-    color: navy;
+    color: $xhibit-colour;
   }
 }
 .search-list{
-  color: white !important;
-}
-.titles, .xhibitTitle {
-  font-size: 30px;
+  color: $xhibit-grey-light;
+  padding: 50px 0 30px 0;
+  .column {
+    .titles, .xhibitTitle {
+      font-size: 20px;
+      color: white;
+      padding-bottom: 1rem;
+    }
+    border-left: 0.5px solid $xhibit-grey-dark;
+    margin-left: 12px;
+  }
 }
 
 .hovers:hover{
@@ -162,7 +182,4 @@
   #featured-exhibitions {
     width: inherit;
   }
-}
-.bold{
-  color: white !important;
 }

@@ -11,51 +11,42 @@
      crossorigin=""></script>
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   </head>
   <body ng-controller="mainCtrl">
 
-    <nav class="navbar is-fixed-top">
-      <div class="navbar-brand">
-        <!-- <a class="navbar-item" href="#">
-          <img src="#" alt="#" width="112" height="28">
-        </a> -->
-        <!-- <div class="navbar-burger burger" data-target="navMenubd-example">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div> -->
-        <!-- <span id="nav-toggle" class="navbar-burger burger nav-toggle" data-target="navMenubd-example">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span> -->
-      </div>
-
+    <nav class="navbar is-fixed-top" id="navbar">
       <div ng-if="isHomepage" id="navMenubd-example" class="navbar-menu">
         <div class="navbar-start">
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link  is-active"  ui-sref="#" id="dropdown-link">EXPLORE</a>
+            <a class="navbar-link  is-active"  ui-sref="#" id="nav-tt">xhibit</a>
 
             <div class="navbar-dropdown">
               <a class="navbar-item" ui-sref="home">Home</a>
               <a class="navbar-item" ui-sref="galleryIndex">Galleries</a>
               <a class="navbar-item" ng-if="isAuthenticated()" ui-sref="galleryNew">Add a gallery</a>
+              <a class="navbar-item" ui-sref="exhibitionIndex">Exhibitions</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="navbar-end">
-        <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="login">Login</a>
-        <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="register">Register</a>
-        <a ng-if="isAuthenticated()" ng-click="handleLogout()" class="navbar-item">Log out {{ username }}</a>
-
+      <div class="user-nav" ng-if="isHomepage">
+        <ul>
+          <li>
+            <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="login">Login</a>
+          </li>
+          <li>
+            <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="register">Register</a>
+          </li>
+          <li>
+            <a ng-if="isAuthenticated()" ng-click="handleLogout()" class="navbar-item">Log out <span class="nav-username">{{ username }}</span></a>
+          </li>
+        </ul>
       </div>
     </nav>
 
     <nav ng-if="!isHomepage" class="navbar">
-      <!-- <div class="navbar-start">
-        <a class="navbar-item">NAVBAR</a>
-      </div> -->
+
       <div class="navbar-end">
         <a class="navbar-item" ui-sref="home">Home</a>
         <a class="navbar-item" ui-sref="galleryIndex">Galleries</a>
@@ -77,6 +68,11 @@
           <div class="columns">
             <div class="column has-text-centered">
               <p><span><a ui-sref="home" class="bold" >HOME</a></span> ||  <span><a ui-sref="galleryIndex" class="bold" >GALLERIES</a></span> ||  <span><a ui-sref="exhibitionIndex" class="bold" >EXHIBITIONS</a></span> ||  <span><a ui-sref="register" class="bold" >REGISTER</a></span></p>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column has-text-centered">
+              <p class="footer-tt">xhibit</p>
             </div>
           </div>
         </div>
