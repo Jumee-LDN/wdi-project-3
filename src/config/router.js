@@ -11,8 +11,18 @@ import homeCtrl from '../controllers/homeCtrl';
 import exhibitionEditCtrl from '../controllers/exhibitions/exhibitionEditCtrl';
 // import mapCtrl from '../controllers/mapCtrl';
 
+// NOTE: This function runs before the state is loaded IF the state has
+// resolve: { secureRoute } on it.
+function secureRoute($auth, $state, Flash) {
+  if (!$auth.isAuthenticated()) {
+    Flash.create('info', 'Please log in');
+    $state.go('login');
+  }
+}
+
+
 //INDIA:
-function Router($stateProvider) {
+function Router($urlRouterProvider, $stateProvider) {
   $stateProvider
     .state('login', {
       templateUrl: './views/auth/login.html',
@@ -53,29 +63,31 @@ function Router($stateProvider) {
     .state('galleryNew', {
       templateUrl: './views/galleries/galleryNew.html',
       url: '/galleries/new',
-      controller: galleryNewCtrl
+      controller: galleryNewCtrl,
+      resolve: { secureRoute }
     })
     .state('galleryEdit', {
       templateUrl: './views/galleries/galleryEdit.html',
       url: '/galleries/:id/edit',
-      controller: galleryEditCtrl
+      controller: galleryEditCtrl,
+      resolve: { secureRoute }
     })
     .state('exhibitionEdit', {
       templateUrl: './views/exhibitions/exhibitionEdit.html',
       url: '/exhibitions/:id/edit',
-      controller: exhibitionEditCtrl
+      controller: exhibitionEditCtrl,
+      resolve: { secureRoute }
     })
     .state('exhibitionNew', {
       templateUrl: './views/exhibitions/exhibitionNew.html',
       url: '/galleries/:galleryId/new',
-      controller: exhibitionNewCtrl
+      controller: exhibitionNewCtrl,
+      resolve: { secureRoute }
     });
-//     .state('map', {
-//       templateUrl: './views/map.html',
-//       url: '/map',
-//       controller: mapCtrl
-//     });
-// }
+
+  // NOTE: Redirect to home whenever the url is invalid.
+  //       This also adds the #! for us if it's not there!
+  $urlRouterProvider.otherwise('/');
 }
 
 export default Router;
