@@ -1,0 +1,25 @@
+
+<div class="columns is-multiline is-mobile">
+
+  <div class="column is-12-desktop has-text-centered">
+    <p class="userP">{{ user.username }}'s Profile</p>
+  </div>
+
+  <div class="column is-4-desktop" ng-repeat="bookmark in user.bookmarkedByMe">
+    <a ui-sref="exhibitionShow({ id: exhibition._id})">
+      <div class="card large">
+        <div class="card-image is-96x96">
+          <figure>
+            <img src="{{ bookmark.image }}" alt="Image">
+          </figure>
+        </div>
+        <p>You & <strong>{{ bookmark.bookmarked.length - 1}}</strong> other(s)</p>
+        <div class="card-content">
+          <div class="media-content">
+            <p id="exhibition" class="title is-4 no-padding">{{ bookmark.name }}</p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

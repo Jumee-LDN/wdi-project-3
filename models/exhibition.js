@@ -6,6 +6,7 @@ const exhibitionSchema = mongoose.Schema({
   rating: Number,
   description: String,
   summary: String,
+  bookmarked: [ { type: mongoose.Schema.ObjectId, ref: 'User' }],
   image: String,
   gallery: {
     type: mongoose.Schema.ObjectId,

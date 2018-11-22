@@ -8,6 +8,7 @@ import galleryEditCtrl from '../controllers/galleries/galleryEditCtrl';
 import registerCtrl from '../controllers/auth/registerCtrl';
 import loginCtrl from '../controllers/auth/loginCtrl';
 import homeCtrl from '../controllers/homeCtrl';
+import userProfileCtrl from '../controllers/auth/userProfileCtrl';
 import exhibitionEditCtrl from '../controllers/exhibitions/exhibitionEditCtrl';
 // import mapCtrl from '../controllers/mapCtrl';
 
@@ -83,11 +84,16 @@ function Router($urlRouterProvider, $stateProvider) {
       url: '/galleries/:galleryId/new',
       controller: exhibitionNewCtrl,
       resolve: { secureRoute }
+    })
+    .state('userProfile',{
+      templateUrl: './views/auth/userProfile.html',
+      url: '/users/:id',
+      controller: userProfileCtrl
     });
-
   // NOTE: Redirect to home whenever the url is invalid.
   //       This also adds the #! for us if it's not there!
   $urlRouterProvider.otherwise('/');
+
 }
 
 export default Router;

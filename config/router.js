@@ -3,6 +3,8 @@ const galleryController = require('../controllers/galleryController');
 const exhibitionController = require('../controllers/exhibitionController');
 const commentController = require('../controllers/commentController');
 const authController = require('../controllers/authController');
+const bookmarkController = require('../controllers/bookmarkController');
+const userController = require('../controllers/userController');
 const jwt = require('jsonwebtoken');
 
 function secureRoute(req, res, next) {
@@ -50,5 +52,13 @@ router.route('/exhibitions/:exhibitionId/comments')
 
 router.route('/exhibitions/:exhibitionId/comments/:commentId')
   .delete(secureRoute, commentController.deleteRoute);
+
+router.route('/exhibitions/:exhibitionId/bookmark')
+  .post(secureRoute, bookmarkController.bookmarkRoute);
+
+// router.route('/exhibitions/:exhibitionId/bookmark/:bookmarkId')
+//   .delete(secureRoute, bookmarkController.deleteRoute);
+
+router.route('/users/:id').get(userController.showRoute);
 
 module.exports = router;
