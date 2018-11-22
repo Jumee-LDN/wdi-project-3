@@ -2,6 +2,12 @@
 
 const Gallery = require('../../models/gallery');
 
+const User = require('../../models/user');
+const jwt = require('jsonwebtoken');
+
+// TODO: add secret to environment file
+const { secret } = require('../../config/environment');
+
 
 const galleryIds = [
   '5be9bd11c7f4b190431791a6',
@@ -26,22 +32,30 @@ const galleryData =  {
 
 
 let galleryId;
+let token;
 
-describe('Gallery SHOW', () => {
+describe('Galleries UPDATE', () => {
 
   beforeEach(done => {
     Gallery.remove({})
       .then(() => Gallery.create(galleryData))
-      .then(gallery => {
-        galleryId = gallery._id;
+      .then(gallery => galleryId = gallery._id)
+      .then(() => User.remove({}))
+      .then(() => User.create({
+        email: 'test',
+        username: 'test',
+        password: 'test'
+      }))
+      .then(user => {
+        token = jwt.sign({ sub: user._id }, secret, { expiresIn: '6h' });
         done();
       });
   });
 
-  it('should return a 200 response', done => {
-    api.get(`/api/galleries/${galleryId}`)
+  it('should return a 401 response without a token', done => {
+    api.put(`/api/galleries/${galleryId}`)
       .end((err, res) => {
-        expect(res.status).to.eq(200);
+        expect(res.status).to.eq(401);
         done();
       });
   });
@@ -51,15 +65,6 @@ describe('Gallery SHOW', () => {
       .end((err, res) => {
         // res.body is the result you would see in Insomnia
         expect(res.body).to.be.an('object');
-        done();
-      });
-  });
-
-  it('should return the correct data', done => {
-    api.get(`/api/galleries/${galleryId}`)
-      .end((err, res) => {
-        expect(res.body.name).to.eq(galleryData.name);
-        expect(res.body.image).to.eq(galleryData.image);
         done();
       });
   });
