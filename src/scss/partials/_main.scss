@@ -6,6 +6,12 @@
   padding-bottom: 60px;
 }
 
+
+#auth-titles {
+  font-family: $xhibit-font;
+  padding-bottom: 1rem;
+}
+
 #userProfile{
   min-height: 600px;
   padding-top: 85px;
@@ -21,6 +27,16 @@
   }
 }
 
+#bookmark-icon {
+  text-align: center;
+  padding: 15px 0 30px;
+  button {
+    color: $xhibit-colour;
+  }
+  :hover {
+    border-color: $xhibit-colour;
+  }
+}
 .about {
   padding: 50px;
   height: 500px;
@@ -73,6 +89,13 @@
   background-size: 1px 10px;
 }
 
+#exhibition-list-section {
+  padding-top: 25px;
+  .card {
+    min-height: 580px;
+  }
+}
+
 .map {
   height: 450px;
   z-index: 0;
@@ -107,9 +130,12 @@
 #row{
   display: flex;
   flex-wrap: wrap;
+  figure {
+    margin: -65px;
+  }
 }
 .topMargin{
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .map-section {
@@ -128,6 +154,7 @@
   position: relative;
 }
 
+
 .search-results {
   z-index: 1;
   position: absolute;
@@ -144,6 +171,7 @@
     color: $xhibit-colour;
   }
 }
+
 .search-list{
   color: $xhibit-grey-light;
   padding: 50px 0 30px 0;
@@ -168,27 +196,27 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-#zoom {
   position: relative;
   margin: 2%;
   overflow: hidden;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
 }
-#zoom img {
-  max-width: 100%;
-  max-height: 100%;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
+
 #zoom:hover img {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+
 }
+
 #grey{
-  margin-top: 100px;
+  margin-top: 125px;
   margin-bottom: 40px;
   font-family:'Merriweather', serif;;
   .grey{
@@ -197,10 +225,27 @@
   }
 }
 
+.add-gallery-section, #gallery-list-title {
+  text-align: center;
+}
+
+
 #featured-exhibitions-section {
   padding: 0;
   padding-bottom: 50px;
+  .card {
+    padding-bottom: 10px;
+    min-height: 500px;
+    max-height: 500px;
+    overflow: scroll;
+    .content {margin: 0 15px;}
+  }
   #featured-exhibitions {
     width: inherit;
   }
+}
+
+#exhibition-card {
+  padding-bottom: 10px;
+  min-height: 400px;
 }

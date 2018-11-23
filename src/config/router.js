@@ -64,27 +64,32 @@ function Router($urlRouterProvider, $stateProvider) {
     .state('galleryNew', {
       templateUrl: './views/galleries/galleryNew.html',
       url: '/galleries/new',
-      controller: galleryNewCtrl
+      controller: galleryNewCtrl,
+      resolve: { secureRoute }
     })
     .state('galleryEdit', {
       templateUrl: './views/galleries/galleryEdit.html',
       url: '/galleries/:id/edit',
-      controller: galleryEditCtrl
+      controller: galleryEditCtrl,
+      resolve: { secureRoute }
     })
     .state('exhibitionEdit', {
       templateUrl: './views/exhibitions/exhibitionEdit.html',
       url: '/exhibitions/:id/edit',
-      controller: exhibitionEditCtrl
+      controller: exhibitionEditCtrl,
+      resolve: { secureRoute }
     })
     .state('exhibitionNew', {
       templateUrl: './views/exhibitions/exhibitionNew.html',
       url: '/galleries/:galleryId/new',
-      controller: exhibitionNewCtrl
+      controller: exhibitionNewCtrl,
+      resolve: { secureRoute }
     })
     .state('userProfile',{
       templateUrl: './views/auth/userProfile.html',
       url: '/users/:id',
-      controller: userProfileCtrl
+      controller: userProfileCtrl,
+      resolve: { secureRoute }
     });
 
   // NOTE: Redirect to home whenever the url is invalid.

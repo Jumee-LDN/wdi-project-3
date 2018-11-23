@@ -6,7 +6,7 @@
       <div class="column is-12-desktop">  <p class="title is-3 has-text-centered"> <i class="fas fa-map-marker-alt "> </i>  {{ gallery.locationName}}</p>
       </div>
       <div class="column is-12-desktop has-text-centered">  <button class="button" ng-if="isAuthenticated()" ui-sref="exhibitionNew({ galleryId: gallery._id })">ADD EXHIBITION ✚</button> </div>
-      
+
       <div class="column is-12-desktop has-text-centered">
         <p>{{ gallery.description }}</p>
       </div>
@@ -27,7 +27,7 @@
   <div class="columns is-multiline is-8-desktop topMargin">
     <div ng-repeat="exhibition in gallery.exhibitionList"  class="column is-4-desktop">
       <a ui-sref="exhibitionShow({ id: exhibition._id})">
-        <div class="card large">
+        <div class="card large" id="exhibition-card">
           <div class="card-image is-96x96">
             <figure>
               <img src="{{ exhibition.image }}" alt="Image">
@@ -41,6 +41,5 @@
         </div>
       </a>
     </div>
-    <!--  -->
   </div>
 </section>

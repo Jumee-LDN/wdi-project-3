@@ -155,7 +155,13 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular@^1.7.1:
+angular-flash-alert@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/angular-flash-alert/-/angular-flash-alert-2.5.0.tgz#321d4908d9acf847aa8a219cc7f6e95a502e71d4"
+  dependencies:
+    angular "^1.4.8"
+
+angular@^1.4.8, angular@^1.7.1:
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.5.tgz#d1c1c01c6f5dc835638f3f9aa51012857bdac49e"
 
@@ -860,7 +866,6 @@ bcrypt-pbkdf@^1.0.0:
 bcrypt@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/bcrypt/-/bcrypt-3.0.2.tgz#3c575c49ccbfdf0875eb42aa1453f5654092a33d"
-  integrity sha512-kE1IaaRchCgdrmzQX/eBQKcsuL4jRHZ+O11sMvEUrI/HgFTQYAGvxlj9z7kb3zfFuwljQ5y8/NrbnXtgx5oJLg==
   dependencies:
     nan "2.11.1"
     node-pre-gyp "0.11.0"
@@ -883,7 +888,7 @@ bluebird@3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
-bluebird@^3.4.7, bluebird@^3.5.1, bluebird@^3.5.3:
+bluebird@^3.4.7, bluebird@^3.5.0, bluebird@^3.5.1, bluebird@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.3.tgz#7d01c6f9616c9a51ab0f8c549a79dfe6ec33efa7"
 
@@ -1065,7 +1070,6 @@ builtin-status-codes@^3.0.0:
 bulma@^0.7.2:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.2.tgz#8e944377b74c7926558830d38d8e19eaf49f5fb6"
-  integrity sha512-6JHEu8U/1xsyOst/El5ImLcZIiE2JFXgvrz8GGWbnDLwTNRPJzdAM0aoUM1Ns0avALcVb6KZz9NhzmU53dGDcQ==
 
 bytes@3.0.0:
   version "3.0.0"
@@ -1487,7 +1491,6 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
 crc@3.4.4:
   version "3.4.4"
   resolved "https://registry.yarnpkg.com/crc/-/crc-3.4.4.tgz#9da1e980e3bd44fc5c93bf5ab3da3378d85e466b"
-  integrity sha1-naHpgOO9RPxck79as9ozeNheRms=
 
 create-ecdh@^4.0.0:
   version "4.0.3"
@@ -2138,7 +2141,6 @@ expand-range@^1.8.1:
 express-session@^1.15.6:
   version "1.15.6"
   resolved "https://registry.yarnpkg.com/express-session/-/express-session-1.15.6.tgz#47b4160c88f42ab70fe8a508e31cbff76757ab0a"
-  integrity sha512-r0nrHTCYtAMrFwZ0kBzZEXa1vtPVrw0dKvGSrKP4dahwBQ1BJpF2/y1Pp4sCD/0kvxV4zZeclyvfmw0B4RMJQA==
   dependencies:
     cookie "0.3.1"
     cookie-signature "1.0.6"
@@ -3281,7 +3283,6 @@ json5@^0.5.0, json5@^0.5.1:
 jsonwebtoken@^8.4.0:
   version "8.4.0"
   resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-8.4.0.tgz#8757f7b4cb7440d86d5e2f3becefa70536c8e46a"
-  integrity sha512-coyXjRTCy0pw5WYBpMvWOMN+Kjaik2MwTUIq9cna/W7NpO9E+iYbumZONAz3hcr+tXFJECoQVrtmIoC3Oz0gvg==
   dependencies:
     jws "^3.1.5"
     lodash.includes "^4.3.0"
@@ -3466,7 +3467,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.10:
+lodash@^4.0.0, lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
@@ -3795,7 +3796,6 @@ mongoose@^5.3.12:
 morgan@^1.9.1:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.9.1.tgz#0a8d16734a1d9afbc824b99df87e738e58e2da59"
-  integrity sha512-HQStPIV4y3afTiCYVxirakhlCfGkI161c76kKFca7Fk1JusM//Qeo1ej2XaMniiNeaZklMVrh3vTtIzpzwbpmA==
   dependencies:
     basic-auth "~2.0.0"
     debug "2.6.9"
@@ -4776,7 +4776,6 @@ querystringify@^2.0.0:
 random-bytes@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/random-bytes/-/random-bytes-1.0.0.tgz#4f68a1dc0ae58bd3fb95848c30324db75d64360b"
-  integrity sha1-T2ih3Arli9P7lYSMMDJNt11kNgs=
 
 randomatic@^3.0.0:
   version "3.1.1"
@@ -4991,6 +4990,21 @@ repeating@^2.0.0:
   resolved "https://registry.yarnpkg.com/repeating/-/repeating-2.0.1.tgz#5214c53a926d3552707527fbab415dbc08d06dda"
   dependencies:
     is-finite "^1.0.0"
+
+request-promise-core@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/request-promise-core/-/request-promise-core-1.1.1.tgz#3eee00b2c5aa83239cfb04c5700da36f81cd08b6"
+  dependencies:
+    lodash "^4.13.1"
+
+request-promise@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/request-promise/-/request-promise-4.2.2.tgz#d1ea46d654a6ee4f8ee6a4fea1018c22911904b4"
+  dependencies:
+    bluebird "^3.5.0"
+    request-promise-core "1.1.1"
+    stealthy-require "^1.1.0"
+    tough-cookie ">=2.3.3"
 
 request@^2.87.0, request@^2.88.0:
   version "2.88.0"
@@ -5484,6 +5498,10 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
+stealthy-require@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
+
 stream-browserify@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-2.0.1.tgz#66266ee5f9bdb9940a4e4514cafb43bb71e5c9db"
@@ -5739,7 +5757,7 @@ toposort@^1.0.0:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/toposort/-/toposort-1.0.7.tgz#2e68442d9f64ec720b8cc89e6443ac6caa950029"
 
-tough-cookie@~2.4.3:
+tough-cookie@>=2.3.3, tough-cookie@~2.4.3:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.4.3.tgz#53f36da3f47783b0925afa06ff9f3b165280f781"
   dependencies:
@@ -5820,7 +5838,6 @@ uglifyjs-webpack-plugin@^0.4.6:
 uid-safe@~2.1.5:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/uid-safe/-/uid-safe-2.1.5.tgz#2b3d5c7240e8fc2e58f8aa269e5ee49c0857bd3a"
-  integrity sha512-KPHm4VL5dDXKz01UuEd88Df+KzynaohSL9fBh096KWAxSKZQDI2uBrVqtvRM4rwrIrRRKsdLNML/lnaaVSRioA==
   dependencies:
     random-bytes "~1.0.0"
 
