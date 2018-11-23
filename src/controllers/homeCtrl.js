@@ -1,6 +1,6 @@
 import mapLib from '../lib/map';
 
-function homeCtrl($scope, $http) {
+function homeCtrl($scope, $http, $state) {
   $http({
     method: 'GET',
     url: '/api/exhibitions'
@@ -8,6 +8,16 @@ function homeCtrl($scope, $http) {
     $scope.allExhibitions = result.data;
     $scope.topExhibitions = $scope.allExhibitions;
   });
+
+  function popUpClick(exhibition){
+    console.log('this is EXID', exhibition._id);
+    $state.go('exhibitionShow', { id: exhibition._id});
+  }
+
+  function galleryPopUpClick(gallery){
+    console.log('this is gallery id', gallery._id);
+    $state.go('galleryShow', { id: gallery._id});
+  }
 
   $http({
     method: 'GET',
@@ -30,9 +40,7 @@ function homeCtrl($scope, $http) {
     console.log('this is....', [lat, lgn]);
     const myDiv = document.createElement('div');
     myDiv.innerHTML = `${gallery.name}🏛`;
-    myDiv.addEventListener('click', function(){
-      window.location.href = `http://localhost:8000/#!/galleries/${gallery._id}`
-    });
+    myDiv.addEventListener('click', () => galleryPopUpClick(gallery));
     mapLib.addMarker([lat, lgn], myDiv);
   };
 
@@ -47,9 +55,7 @@ function homeCtrl($scope, $http) {
     console.log('this is....', [lat, lgn]);
     const myDiv = document.createElement('div');
     myDiv.innerHTML = `${exhibition.name} at (the) ${exhibition.gallery.name}🏛`;
-    myDiv.addEventListener('click', function($state){
-      $state.go('exhibitionShow({ id: exhibition._id})');
-    });
+    myDiv.addEventListener('click', () => popUpClick(exhibition));
     mapLib.addMarker([lat, lgn], myDiv);
   };
 
