@@ -47,8 +47,8 @@ function homeCtrl($scope, $http) {
     console.log('this is....', [lat, lgn]);
     const myDiv = document.createElement('div');
     myDiv.innerHTML = `${exhibition.name} at (the) ${exhibition.gallery.name}🏛`;
-    myDiv.addEventListener('click', function(){
-      window.location.href = `http://localhost:8000/#!/exhibitions/${exhibition._id}`
+    myDiv.addEventListener('click', function($state){
+      $state.go('exhibitionShow({ id: exhibition._id})');
     });
     mapLib.addMarker([lat, lgn], myDiv);
   };

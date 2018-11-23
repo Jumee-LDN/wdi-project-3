@@ -3,7 +3,7 @@ const Exhibition = require('../models/exhibition');
 function bookmarkRoute(req, res, next) {
   Exhibition
     .findById(req.params.exhibitionId)
-    .populate('gallery')
+    .populate('gallery comments.commentAuthor')
     .then(exhibition => {
       if(!exhibition.bookmarked.find(userId => userId.toString() === req.tokenUserId)){
         exhibition.bookmarked.push(req.tokenUserId);
@@ -21,7 +21,7 @@ function deleteRoute(req, res, next) {
   console.log('you got to the unbookmark function');
   Exhibition
     .findById(req.params.exhibitionId)
-    .populate('gallery')
+    .populate('gallery comments.commentAuthor')
     .then(exhibition => {
       console.log('exhibition', exhibition, req.tokenUserId);
       if(!exhibition.bookmarked.find( userId => userId.toString() === req.tokenUserId)){
