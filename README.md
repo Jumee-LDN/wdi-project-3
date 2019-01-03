@@ -94,15 +94,15 @@ This was the first team development also to build a full-stack application using
 
 **Teamwork** and **time management**
 > - Face to face communication.
-- Daily morning stand-up.
-- Co-located work base and mobile flexibility. (Trello and Slack communication)
-- Status report through Slack.
-- Fill each other’s water cups.
+> - Daily morning stand-up.
+> - Co-located work base and mobile flexibility. (Trello and Slack communication)
+> - Status report through Slack.
+> - Fill each other’s water cups.
 
 **Stress control**
 > - High fives on wins.
-- Stick to the big plan but also be flexible.
-- Good rest. No late nights.
+> - Stick to the big plan but also be flexible.
+> - Good rest. No late nights.
 
 #### Lessons learned
 Set Sass rules at the start of the project to organise code better. Aim a tad higher. Could add more features.
