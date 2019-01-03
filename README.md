@@ -59,13 +59,23 @@ Enhanced manpower, 7 days to plan and build. My list of priorities:
 - Gallery index, show.
 - Register
 
->Registered user can
+> Registered user can
 - Log in and out
 - Create gallery page
 - Write exhibition review thorough gallery page
 - Make comment on the exhibition review show page
 - Bookmark the exhibition review
 - View all bookmarks in user profile page
+
+##### Home
+![image width="150"](./src/assets/readmes/home.gif)
+
+##### Exhibitions
+![image width="150"](./src/assets/readmes/exhibitions.gif)
+
+##### Galleries and User Profile
+![image width="150"](./src/assets/readmes/gallery.gif)
+
 
 ## Project Log
 #### Approach
@@ -77,6 +87,9 @@ Enhanced manpower, 7 days to plan and build. My list of priorities:
 | Monday, Thursday (**1.5 days**)      | Extra features, Bug fixing, Testing, Git, Deployment|
 
 #### Challenges
+
+![image width="200"](./src/assets/readmes/trello.gif)
+
 This was the first team development also to build a full-stack application using Angular. the team used methods below to achieve the goals.
 
 **Teamwork** and **time management**
@@ -100,9 +113,7 @@ Set Sass rules at the start of the project to organise code better. Aim a tad hi
 - Flash message to login for benefits.
 - Create user class to classify an authorise reviewer and a regular user.
 - Mobile responsive.
-
-
-
+- Any logged in user can edit and delete post.
 
 ## Technologies Used
 | Category | List |
@@ -118,8 +129,6 @@ Set Sass rules at the start of the project to organise code better. Aim a tad hi
 | Text Editor                          | Atom |
 | Browser                              | Chrome |
 | Version control | Git and GitHub
-
-
 
 ## License
 
