@@ -6,7 +6,7 @@ This was the third project during my time on the Web Development Immersive cours
 
 **Note**
 - The app is not yet fully responsive. For best experience open on the laptop.
-- The site may load slower than the average(2-3 seconds) loading time.
+- The landing page may take longer than the average page load time.
 
 #### Course Curriculum :
 
@@ -52,7 +52,7 @@ Enhanced manpower, 7 days to plan and build. My list of priorities:
 
 ## Visuals
 
-## All features
+##### All features
 > User can access to
 - Home page: Map interaction, Featured exhibitions filtered by top rated.
 - Exhibition index, show. And comments.
