@@ -79,12 +79,12 @@ Enhanced manpower, 7 days to plan and build. My list of priorities:
 
 ## Project Log
 #### Approach
-| Time                                 | Action                                              |
-| ------------------------------------ |:---------------------------------------------------:|
-| Thursday ( **half day** )            | Project concept, code planning, wireframe           |
-| Sunday, Monday, Tuesday ( **3 days**)| Server side work. Initial front end set up.         |
-| Tuesday, Wednesday (**1.5 days**)    | Client side work. Style / Scss.                     |
-| Monday, Thursday (**1.5 days**)      | Extra features, Bug fixing, Testing, Git, Deployment|
+| Time | Action |
+| ---- |:------:|
+| Thursday ( **half day** ) | Project concept, code planning, wireframe |
+| Sunday, Monday, Tuesday ( **3 days**)| Server side work. Initial front end set up. |
+| Tuesday, Wednesday (**1.5 days**) | Client side work. Style / Scss. |
+| Monday, Thursday (**1.5 days**) | Extra features, Bug fixing, Testing, Git, Deployment |
 
 #### Challenges
 
@@ -196,7 +196,7 @@ Please see below for the details of my training and links to more projects.
 #### Jumee Lee
 Email : jumeelee.london@gmail.com
 
-[Portfolio](https://jumeelee.co.uk/) | [LinkedIn](https://www.linkedin.com/in/jumeelee/) | [GitHub](https://github.com/Jumee-LDN)
+[Portfolio]() | [LinkedIn](https://www.linkedin.com/in/jumeelee/) | [GitHub](https://github.com/Jumee-LDN)
 
 #### India Derrick
 [GitHub](https://github.com/indiaderrick)
