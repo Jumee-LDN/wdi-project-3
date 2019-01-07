@@ -12,7 +12,7 @@ This was the third project during my time on the Web Development Immersive cours
 
 > **Week 7-8** | Module Three
 
-- Angular
+- AngularJS
 - Token Authentication & Session Authentication
 - Third-party APIs
 - Mocha and Chai
@@ -22,7 +22,7 @@ This was the third project during my time on the Web Development Immersive cours
 ***
 
 ## Brief
-The course instructors had partnered students with other classmates to design and collaboratively build a MEAN (MongoDB, Express, Angular, Node.js) stack app of their own design.
+The course instructors had partnered students with other classmates to design and collaboratively build a MEAN (MongoDB, Express, AngularJS, Node.js) stack app of their own design.
 
 > **Server side**
 * Use Mongo, Node & Express to build a server-side API
@@ -33,7 +33,7 @@ The course instructors had partnered students with other classmates to design an
 * Include automated tests
 
 > **Client side**
-* Use Angular
+* Use AngularJS
 * Use SCSS
 * Use Webpack & Yarn** to manage your dependencies and compile your source code
 
@@ -172,7 +172,7 @@ Please see below for the details of my training and links to more projects.
 
 > **Week 7-8** | Module Three
 
-- Angular
+- AngularJS
 - Token Authentication & Session Authentication
 - Third-party APIs
 - Mocha and Chai
