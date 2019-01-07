@@ -87,6 +87,8 @@ Enhanced manpower, 7 days to plan and build. My list of priorities:
 | Tuesday, Wednesday (**1.5 days**) | Client side work. Style / Scss. |
 | Monday, Thursday (**1.5 days**) | Extra features, Bug fixing, Testing, Git, Deployment |
 
+The team planned the structure and the approach of the application together.  The each team member were assigned a model and routes to create to start with. I was in charge of Gallery model and routes. When the initial setups were done, the members were free to handle more tasks based on the project management plan on Trello.  
+
 #### Challenges
 
 ![image width="200"](./src/assets/readmes/trello.gif)
