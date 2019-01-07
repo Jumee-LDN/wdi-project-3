@@ -47,8 +47,9 @@ Enhanced manpower, 7 days to plan and build. My list of priorities:
 - Fulfill the brief. There were more requirements then the previous projects.
 - Time management. MVP focused project management. More men could also mean more variables.
   The team both agreed it is important to track time and keep an eye on.
+  Daily morning stand up and git version control methods were used.
 - Team work. The team decided to use Trello Technology to assign tasks and track the progress.
-- Stress control.
+- Stress control. Get everything ready to present by day 6.
 
 ## Visuals
 
