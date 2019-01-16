@@ -35,21 +35,22 @@ The course instructors had partnered students with other classmates to design an
 > **Client side**
 * Use AngularJS
 * Use SCSS
-* Use Webpack & Yarn** to manage your dependencies and compile your source code
+* Use Webpack & Yarn to manage your dependencies and compile your source code
 
 **Timeframe :** 1 week (November 2018)
 
 ## Concept
-Search new art exhibitions in the capital, read reviews, bookmark exhibitions and make a comment about what you think. The group found a common interest in art and both member had a same goals.
+xhibit allows users to search the current art exhibitions in the world. The exhibitions are also searchable by galleries, all are displayable on the map.
+The application was built using the MEAN stack: MongoDB, Express.js, AngularJS, and Node.js
+Token and session authentication, OpenStreetMap with Leaflet used.
 
 ## Goal
 Enhanced manpower, 7 days to plan and build. My list of priorities:
-- Fulfill the brief. There were more requirements then the previous projects.
-- Time management. MVP focused project management. More men could also mean more variables.
-  The team both agreed it is important to track time and keep an eye on.
-  Daily morning stand up and git version control methods were used.
-- Team work. The team decided to use Trello Technology to assign tasks and track the progress.
-- Stress control. Get everything ready to present by day 6.
+- Fulfill the brief: There were more requirements than the previous projects.
+- Time management: MVP focused project management. The team agreed it is important
+to track time and keep an eye on our progress. We did daily morning stand-ups and Git version control.
+- Team work: The team decided to use Trello to assign tasks and track the progress.
+- Stress control: Get everything ready to present by Day 6.
 
 ## Visuals
 
@@ -87,13 +88,13 @@ Enhanced manpower, 7 days to plan and build. My list of priorities:
 | Tuesday, Wednesday (**1.5 days**) | Client side work. Style / Scss. |
 | Monday, Thursday (**1.5 days**) | Extra features, Bug fixing, Testing, Git, Deployment |
 
-The team planned the structure and the approach of the application together.  The each team member were assigned a model and routes to create to start with. I was in charge of Gallery model and routes. When the initial setups were done, the members were free to handle more tasks based on the project management plan on Trello.  
+Each team member was assigned a model and routes to create to start from. I was in charge of the Gallery model and routes. When the initial setups were done, the members were free to handle more tasks based on the project management plan on Trello.
 
 #### Challenges
 
 ![image width="200"](./src/assets/readmes/trello.gif)
 
-This was the first team development also to build a full-stack application using Angular. the team used methods below to achieve the goals.
+Within a sprint of seven days, and in a team of two, we created xhibit during week 9 of the course. This was the first team project and we found a common interest in art and both members had the same goals to achieve.
 
 **Teamwork** and **time management**
 > - Face to face communication.
@@ -121,7 +122,7 @@ Set Sass rules at the start of the project to organise code better. Aim a tad hi
 ## Technologies Used
 | Category | List |
 | ---- | --- |
-| Languages                            | Javascript (ECMAScript6), CSS3, Sass, HTML5 |
+| Languages                            | JavaScript (ECMAScript6), CSS3, Sass, HTML5 |
 | Front-end Web Application Framework  | AngularJS |
 | Server Environment                   | Node.js with Express.js |
 | CSS Framework                        | Bulma |
