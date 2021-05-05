@@ -2,7 +2,7 @@
 
 ## GA Project 3
 #### Team of 2
-This was the third project during my time on the Web Development Immersive course (12 weeks of full-time) at General Assembly. The project took place in the week 9. [>>To the Site<<](https://xhibit.herokuapp.com/#!/)
+This was the third project during my time on the Web Development Immersive course (12 weeks of full-time) at General Assembly. The project took place in the week 9.
 
 **Note**
 - The app is not yet fully responsive. For best experience open on the laptop.
